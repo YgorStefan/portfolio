@@ -14,11 +14,11 @@
 
 ### Layout e Navegação
 
-- [ ] **LAYOUT-01**: Layout Blade base (`layouts/app.blade.php`) com header, main e footer
-- [ ] **LAYOUT-02**: Navegação com links de âncora suave para cada seção
-- [ ] **LAYOUT-03**: Menu hamburger funcional em mobile (Alpine.js)
-- [ ] **LAYOUT-04**: Botão "voltar ao topo" com transição suave
-- [ ] **LAYOUT-05**: Design responsivo em mobile, tablet e desktop
+- [x] **LAYOUT-01**: Layout Blade base (`layouts/app.blade.php`) com header, main e footer
+- [x] **LAYOUT-02**: Navegação com links de âncora suave para cada seção
+- [x] **LAYOUT-03**: Menu hamburger funcional em mobile (Alpine.js)
+- [x] **LAYOUT-04**: Botão "voltar ao topo" com transição suave
+- [x] **LAYOUT-05**: Design responsivo em mobile, tablet e desktop
 
 ### Seção Hero
 
@@ -106,11 +106,11 @@
 | INFRA-02 | Phase 1 | Complete |
 | INFRA-03 | Phase 1 | Pending |
 | INFRA-04 | Phase 1 | Complete |
-| LAYOUT-01 | Phase 1 | Pending |
-| LAYOUT-02 | Phase 1 | Pending |
-| LAYOUT-03 | Phase 1 | Pending |
-| LAYOUT-04 | Phase 1 | Pending |
-| LAYOUT-05 | Phase 1 | Pending |
+| LAYOUT-01 | Phase 1 | Complete |
+| LAYOUT-02 | Phase 1 | Complete |
+| LAYOUT-03 | Phase 1 | Complete |
+| LAYOUT-04 | Phase 1 | Complete |
+| LAYOUT-05 | Phase 1 | Complete |
 | HERO-01 | Phase 2 | Pending |
 | HERO-02 | Phase 2 | Pending |
 | HERO-03 | Phase 2 | Pending |
