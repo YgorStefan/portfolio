@@ -28,7 +28,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. The Blade layout (`layouts/app.blade.php`) renders at `GET /` with header, main, and footer visible; smooth-scroll nav links and mobile hamburger menu (Alpine.js) work at all breakpoints
   3. Google Fonts load correctly in a production build (no 404 or CORS errors)
   4. A deploy guide documents exactly how to configure Hostinger document root to `public/`, set `APP_DEBUG=false`, and verify that `yourdomain.com/.env` returns 403/404 — not file contents
-**Plans**: TBD
+**Plans**: 3 plans
+Plans:
+- [ ] 01-PLAN-A.md — Asset pipeline: Laravel project creation, Vite + Tailwind v4 + Alpine.js wiring, .env.example, projects.json stub
+- [ ] 01-PLAN-B.md — Blade layout shell: routing, controller, layouts/app.blade.php, partials/nav.blade.php (hamburger), partials/footer.blade.php (back-to-top)
+- [ ] 01-PLAN-C.md — Hostinger deploy guide: document root strategies, production .env config, security verification checklist
 **UI hint**: yes
 
 ### Phase 2: Core UI Sections
@@ -72,7 +76,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/TBD | Not started | - |
+| 1. Foundation | 0/3 | Not started | - |
 | 2. Core UI Sections | 0/TBD | Not started | - |
 | 3. Contact Form Backend | 0/TBD | Not started | - |
 | 4. Polish and Deploy | 0/TBD | Not started | - |
@@ -80,3 +84,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 ---
 *Roadmap created: 2026-03-24*
 *Coverage: 41/41 v1 requirements mapped — 0 orphans*
+*Phase 1 plans created: 2026-03-24*
