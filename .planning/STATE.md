@@ -2,14 +2,14 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: Ready to execute
-stopped_at: Completed 01-foundation-B-PLAN.md
-last_updated: "2026-03-24T21:22:34.624Z"
+status: Phase complete — ready for verification
+stopped_at: Completed 01-foundation-C-PLAN.md
+last_updated: "2026-03-24T21:25:51.395Z"
 progress:
   total_phases: 4
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 3
-  completed_plans: 2
+  completed_plans: 3
 ---
 
 # Project State
@@ -48,6 +48,7 @@ Plan: 3 of 3
 *Updated after each plan completion*
 | Phase 01-foundation PA | 8 | 2 tasks | 8 files |
 | Phase 01-foundation PB | 4 | 2 tasks | 6 files |
+| Phase 01-foundation PC | 2 | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -65,6 +66,8 @@ Recent decisions affecting current work:
 - [Phase 01-foundation]: Exact npm versions pinned: tailwindcss@4.2.2, @tailwindcss/vite@4.2.2, alpinejs@3.15.8, @alpinejs/intersect@3.15.8
 - [Phase 01-foundation]: SESSION_DRIVER and CACHE_STORE switched to file (SQLite PDO unavailable in dev env — no impact on portfolio)
 - [Phase 01-foundation]: Blade layout uses @extends/@section/@yield pattern with partials included in master layout
+- [Phase 01-foundation]: Strategy A (index.php path rewrite) recommended as default deploy path — works on all Hostinger plans, no SSH required
+- [Phase 01-foundation]: Security checklist with .env 403/404 check is a mandatory pre-Phase-4 gate — must pass before any credentials go on server
 
 ### Pending Todos
 
@@ -77,6 +80,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-24T21:22:34.618Z
-Stopped at: Completed 01-foundation-B-PLAN.md
+Last session: 2026-03-24T21:25:51.391Z
+Stopped at: Completed 01-foundation-C-PLAN.md
 Resume file: None

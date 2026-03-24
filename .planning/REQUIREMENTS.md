@@ -9,7 +9,7 @@
 
 - [x] **INFRA-01**: Projeto Laravel 12 criado com PHP 8.2, Vite e Tailwind CSS v4
 - [x] **INFRA-02**: Pipeline Vite compilando corretamente (`npm run build`) com output em `public/build/`
-- [ ] **INFRA-03**: Configuração de deploy documentada para Hostinger (document root → `public/`)
+- [x] **INFRA-03**: Configuração de deploy documentada para Hostinger (document root → `public/`)
 - [x] **INFRA-04**: `.env.example` com todas as variáveis necessárias documentadas
 
 ### Layout e Navegação
@@ -104,7 +104,7 @@
 |-------------|-------|--------|
 | INFRA-01 | Phase 1 | Complete |
 | INFRA-02 | Phase 1 | Complete |
-| INFRA-03 | Phase 1 | Pending |
+| INFRA-03 | Phase 1 | Complete |
 | INFRA-04 | Phase 1 | Complete |
 | LAYOUT-01 | Phase 1 | Complete |
 | LAYOUT-02 | Phase 1 | Complete |
