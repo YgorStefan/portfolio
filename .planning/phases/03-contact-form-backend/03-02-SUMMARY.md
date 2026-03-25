@@ -81,7 +81,7 @@ Each task was committed atomically:
 1. **Task 1: Create ContactFormMail Mailable and email template** - `342e6dc` (feat)
 2. **Task 2: Configure mail — owner_address in config/mail.php and env variables** - `d687cbb` (chore)
 
-**Plan metadata:** (docs commit follows)
+**Plan metadata:** `6de5baa` (docs: complete plan)
 
 ## Files Created/Modified
 
