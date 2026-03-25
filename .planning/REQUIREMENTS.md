@@ -37,9 +37,9 @@
 ### Seção Skills
 
 - [x] **SKILL-01**: Carrossel de tecnologias usando Swiper.js
-- [ ] **SKILL-02**: Cada card exibe ícone/logo e nome da tecnologia
-- [ ] **SKILL-03**: Skills carregadas a partir de dado configurável (array no controller ou JSON)
-- [ ] **SKILL-04**: Paginação e/ou navegação do Swiper funcional
+- [x] **SKILL-02**: Cada card exibe ícone/logo e nome da tecnologia
+- [x] **SKILL-03**: Skills carregadas a partir de dado configurável (array no controller ou JSON)
+- [x] **SKILL-04**: Paginação e/ou navegação do Swiper funcional
 
 ### Seção Projetos
 
@@ -120,9 +120,9 @@
 | ABOUT-03 | Phase 2 | Complete |
 | ABOUT-04 | Phase 2 | Complete |
 | SKILL-01 | Phase 2 | Complete |
-| SKILL-02 | Phase 2 | Pending |
-| SKILL-03 | Phase 2 | Pending |
-| SKILL-04 | Phase 2 | Pending |
+| SKILL-02 | Phase 2 | Complete |
+| SKILL-03 | Phase 2 | Complete |
+| SKILL-04 | Phase 2 | Complete |
 | PROJ-01 | Phase 2 | Pending |
 | PROJ-02 | Phase 2 | Pending |
 | PROJ-03 | Phase 2 | Pending |
