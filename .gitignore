@@ -22,3 +22,10 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+# GSD Workflow
+/.planning
+
+# Databases
+database/*.sqlite
+database/*.sqlite-journal

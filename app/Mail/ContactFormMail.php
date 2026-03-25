@@ -21,7 +21,7 @@ class ContactFormMail extends Mailable
     {
         return new Envelope(
             replyTo: [
-                Address::make($this->formData['email'], $this->formData['name']),
+                new Address($this->formData['email'], $this->formData['name']),
             ],
             subject: '[Portfólio] ' . $this->formData['subject'],
         );
