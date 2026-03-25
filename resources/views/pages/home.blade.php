@@ -150,8 +150,83 @@
         </div>
     </section>
 
-    <section id="projects" class="min-h-screen flex items-center justify-center">
-        <p class="text-gray-400 text-sm">Projetos — Phase 2</p>
+    <section id="projects" class="py-24 bg-bg-primary">
+        <div class="container mx-auto px-6">
+
+            {{-- Section heading --}}
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Projetos</h2>
+                <div class="w-16 h-1 bg-accent mx-auto rounded-full"></div>
+                <p class="text-gray-400 mt-4 max-w-xl mx-auto">
+                    Alguns dos projetos que desenvolvi — clique para ver o código ou a demo.
+                </p>
+            </div>
+
+            {{-- Projects grid -- PROJ-01, PROJ-02 --}}
+            {{-- 1 col mobile, 2 col tablet (md), 3 col desktop (lg) --}}
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                @foreach($projects as $i => $project)
+                    {{-- Card -- PROJ-03, PROJ-04 --}}
+                    {{-- AOS stagger capped at 400ms to avoid long waits on large grids --}}
+                    <div class="relative group overflow-hidden rounded-xl bg-bg-card border border-gray-800
+                                hover:border-accent/30 transition-all duration-300 hover:-translate-y-1"
+                         data-aos="fade-up"
+                         data-aos-delay="{{ min($i * 100, 400) }}">
+
+                        {{-- Project image with scale-on-hover -- PROJ-03 --}}
+                        <div class="aspect-video bg-gray-800 overflow-hidden">
+                            <img src="{{ asset('images/projects/' . $project['image']) }}"
+                                 alt="{{ $project['title'] }}"
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                 onerror="this.style.display='none'">
+                        </div>
+
+                        {{-- Card body -- PROJ-03 --}}
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-white mb-2">{{ $project['title'] }}</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-4">{{ $project['description'] }}</p>
+
+                            {{-- Tech tags -- PROJ-03 --}}
+                            <div class="flex flex-wrap gap-2">
+                                @foreach($project['tags'] as $tag)
+                                    <span class="text-xs font-medium text-accent bg-accent/10 border border-accent/20
+                                                 px-2 py-1 rounded-md">
+                                        {{ $tag }}
+                                    </span>
+                                @endforeach
+                            </div>
+                        </div>
+
+                        {{-- Hover overlay with demo + repo links -- PROJ-04 --}}
+                        <div class="absolute inset-0 bg-bg-primary/90 opacity-0 group-hover:opacity-100
+                                    transition-opacity duration-300 flex items-center justify-center gap-4">
+                            @if($project['url'])
+                                <a href="{{ $project['url'] }}"
+                                   target="_blank" rel="noopener noreferrer"
+                                   class="bg-accent hover:bg-accent/90 text-white px-5 py-2.5 rounded-lg
+                                          text-sm font-semibold transition-colors duration-300">
+                                    Demo
+                                </a>
+                            @endif
+                            @if($project['repo'])
+                                <a href="{{ $project['repo'] }}"
+                                   target="_blank" rel="noopener noreferrer"
+                                   class="border border-white text-white hover:border-accent hover:text-accent
+                                          px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors duration-300">
+                                    Repositório
+                                </a>
+                            @endif
+                            @if(!$project['url'] && !$project['repo'])
+                                <span class="text-gray-400 text-sm">Em breve</span>
+                            @endif
+                        </div>
+
+                    </div>
+                @endforeach
+
+            </div>
+        </div>
     </section>
 
     <section id="contact" class="min-h-screen flex items-center justify-center">
