@@ -13,7 +13,7 @@ Four phases take the project from a blank Laravel install to a live, recruiter-r
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [ ] **Phase 1: Foundation** - Laravel 12 + Vite + Tailwind v4 pipeline, Blade layout shell, routing, and verified Hostinger deployment path
-- [ ] **Phase 2: Core UI Sections** - All five portfolio sections rendered, responsive, animated, with projects loaded from JSON
+- [x] **Phase 2: Core UI Sections** - All five portfolio sections rendered, responsive, animated, with projects loaded from JSON (completed 2026-03-25)
 - [ ] **Phase 3: Contact Form Backend** - ContactController, Mailable, SMTP via transactional provider, validation, rate limiting
 - [ ] **Phase 4: Polish and Deploy** - OG meta tags, production checklist executed, site live on Hostinger
 
@@ -51,7 +51,7 @@ Plans:
 - [x] 02-B-PLAN.md — Hero + About sections: name/role/photo/CTA in hero; bio/photo/CV-download in about; AOS animations on both
 - [x] 02-C-PLAN.md — Skills carousel: $skills array in PortfolioController, Swiper markup with Devicon icons and pagination
 - [x] 02-D-PLAN.md — Projects section: populate projects.json with schema + 4 sample entries, responsive grid with hover overlay cards
-- [ ] 02-E-PLAN.md — Contact UI + visual checkpoint: form fields + social links in contact section, final build, human verification of all 5 sections
+- [x] 02-E-PLAN.md — Contact UI + visual checkpoint: form fields + social links in contact section, final build, human verification of all 5 sections
 **UI hint**: yes
 
 ### Phase 3: Contact Form Backend
@@ -83,7 +83,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/3 | In Progress|  |
-| 2. Core UI Sections | 1/5 | In Progress|  |
+| 2. Core UI Sections | 5/5 | Complete   | 2026-03-25 |
 | 3. Contact Form Backend | 0/TBD | Not started | - |
 | 4. Polish and Deploy | 0/TBD | Not started | - |
 
