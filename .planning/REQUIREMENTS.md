@@ -36,7 +36,7 @@
 
 ### Seção Skills
 
-- [ ] **SKILL-01**: Carrossel de tecnologias usando Swiper.js
+- [x] **SKILL-01**: Carrossel de tecnologias usando Swiper.js
 - [ ] **SKILL-02**: Cada card exibe ícone/logo e nome da tecnologia
 - [ ] **SKILL-03**: Skills carregadas a partir de dado configurável (array no controller ou JSON)
 - [ ] **SKILL-04**: Paginação e/ou navegação do Swiper funcional
@@ -61,7 +61,7 @@
 ### Visual e Animações
 
 - [ ] **VIS-01**: Dark theme com acento azul elétrico consistente em todos os elementos interativos
-- [ ] **VIS-02**: Animações de entrada ao scroll com AOS em todas as seções
+- [x] **VIS-02**: Animações de entrada ao scroll com AOS em todas as seções
 - [ ] **VIS-03**: Transições hover suaves em botões, links e cards de projeto
 - [x] **VIS-04**: Google Fonts carregando corretamente em produção
 
@@ -72,9 +72,9 @@
 
 ### Assets
 
-- [ ] **ASSET-01**: Foto de perfil do usuário presente em `public/images/`
-- [ ] **ASSET-02**: CV em PDF presente em `public/files/curriculo.pdf`
-- [ ] **ASSET-03**: Imagens dos projetos otimizadas presentes em `public/images/projects/`
+- [x] **ASSET-01**: Foto de perfil do usuário presente em `public/images/`
+- [x] **ASSET-02**: CV em PDF presente em `public/files/curriculo.pdf`
+- [x] **ASSET-03**: Imagens dos projetos otimizadas presentes em `public/images/projects/`
 
 ## v2 Requirements
 
@@ -119,7 +119,7 @@
 | ABOUT-02 | Phase 2 | Pending |
 | ABOUT-03 | Phase 2 | Pending |
 | ABOUT-04 | Phase 2 | Pending |
-| SKILL-01 | Phase 2 | Pending |
+| SKILL-01 | Phase 2 | Complete |
 | SKILL-02 | Phase 2 | Pending |
 | SKILL-03 | Phase 2 | Pending |
 | SKILL-04 | Phase 2 | Pending |
@@ -135,14 +135,14 @@
 | CONTACT-05 | Phase 3 | Pending |
 | CONTACT-06 | Phase 3 | Pending |
 | VIS-01 | Phase 2 | Pending |
-| VIS-02 | Phase 2 | Pending |
+| VIS-02 | Phase 2 | Complete |
 | VIS-03 | Phase 2 | Pending |
 | VIS-04 | Phase 1 | Complete |
 | SEO-01 | Phase 4 | Pending |
 | SEO-02 | Phase 4 | Pending |
-| ASSET-01 | Phase 2 | Pending |
-| ASSET-02 | Phase 2 | Pending |
-| ASSET-03 | Phase 2 | Pending |
+| ASSET-01 | Phase 2 | Complete |
+| ASSET-02 | Phase 2 | Complete |
+| ASSET-03 | Phase 2 | Complete |
 
 **Coverage:**
 - v1 requirements: 41 total

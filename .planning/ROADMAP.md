@@ -47,7 +47,7 @@ Plans:
   5. The layout is responsive and correct at 320 px, 375 px, 768 px, and 1280 px — no horizontal overflow, no broken grids; dark theme with electric-blue accent is consistent across all interactive elements
 **Plans**: 5 plans
 Plans:
-- [ ] 02-A-PLAN.md — Dependency setup: npm install swiper + aos, rewrite app.js with DOMContentLoaded init, add Devicon CDN to layout, create placeholder assets
+- [x] 02-A-PLAN.md — Dependency setup: npm install swiper + aos, rewrite app.js with DOMContentLoaded init, add Devicon CDN to layout, create placeholder assets
 - [ ] 02-B-PLAN.md — Hero + About sections: name/role/photo/CTA in hero; bio/photo/CV-download in about; AOS animations on both
 - [ ] 02-C-PLAN.md — Skills carousel: $skills array in PortfolioController, Swiper markup with Devicon icons and pagination
 - [ ] 02-D-PLAN.md — Projects section: populate projects.json with schema + 4 sample entries, responsive grid with hover overlay cards
@@ -83,7 +83,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/3 | In Progress|  |
-| 2. Core UI Sections | 0/5 | Ready to execute | - |
+| 2. Core UI Sections | 1/5 | In Progress|  |
 | 3. Contact Form Backend | 0/TBD | Not started | - |
 | 4. Polish and Deploy | 0/TBD | Not started | - |
 
