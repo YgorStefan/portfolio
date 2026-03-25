@@ -10,3 +10,15 @@
     --color-bg-card: #111827;
     --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
 }
+
+/* Override Swiper's position:absolute on pagination so dots appear below slides */
+.swiper-skills {
+    padding-bottom: 2.5rem;
+}
+.swiper-skills .swiper-pagination {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
