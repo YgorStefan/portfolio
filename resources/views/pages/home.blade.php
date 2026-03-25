@@ -261,9 +261,34 @@
 
                 {{-- Contact form -- CONTACT-01 (UI only; backend wired in Phase 3) --}}
                 <div data-aos="fade-right">
-                    {{-- NOTE: action="" is intentionally empty. Phase 3 adds action="{{ route('contact.send') }}" --}}
-                    {{-- NOTE: Phase 3 also adds @csrf and method="POST" --}}
-                    <form action="" method="POST" class="space-y-6" id="contact-form">
+                    <form action="{{ route('contact.send') }}"
+                          method="POST"
+                          class="space-y-6"
+                          id="contact-form"
+                          x-data="{ submitting: false }"
+                          @submit="submitting = true">
+                        @csrf
+
+                        {{-- Success banner — CONTACT-04 --}}
+                        @if(session('success'))
+                            <div class="bg-green-900/30 border border-green-500/30 text-green-400 rounded-lg px-4 py-3 text-sm">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+
+                        {{-- Error banner (mail dispatch failure) — CONTACT-04 --}}
+                        @if(session('error'))
+                            <div class="bg-red-900/30 border border-red-500/30 text-red-400 rounded-lg px-4 py-3 text-sm">
+                                {{ session('error') }}
+                            </div>
+                        @endif
+
+                        {{-- Validation error summary — a11y fallback --}}
+                        @if($errors->any())
+                            <div class="bg-red-900/30 border border-red-500/30 text-red-400 rounded-lg px-4 py-3 text-sm">
+                                Por favor, corrija os erros abaixo.
+                            </div>
+                        @endif
 
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-300 mb-2">
@@ -321,11 +346,13 @@
                                              transition-colors duration-300"></textarea>
                         </div>
 
-                        {{-- Submit button — Phase 3 will disable this on submission --}}
                         <button type="submit"
+                                :disabled="submitting"
                                 class="w-full bg-accent hover:bg-accent/90 text-white font-semibold
                                        py-3 px-6 rounded-lg transition-all duration-300 hover:-translate-y-0.5
-                                       focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-card">
+                                       focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-card
+                                       disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                                x-text="submitting ? 'Enviando...' : 'Enviar Mensagem'">
                             Enviar Mensagem
                         </button>
 
