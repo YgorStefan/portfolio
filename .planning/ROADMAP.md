@@ -65,7 +65,7 @@ Plans:
   4. Sending more than 5 requests per minute from one IP returns a throttle error; GitHub, LinkedIn, WhatsApp, and Email social links are visible in the contact section and open correctly
 **Plans**: 4 plans
 Plans:
-- [ ] 03-01-PLAN.md — Route + ContactController + rate limiter: POST /contact, validate(), RateLimiter::for('contact', 5/min)
+- [x] 03-01-PLAN.md — Route + ContactController + rate limiter: POST /contact, validate(), RateLimiter::for('contact', 5/min)
 - [ ] 03-02-PLAN.md — ContactFormMail + email template + mail config: Mailable, mail/contact.blade.php, config/mail.php owner_address, .env.example Brevo SMTP
 - [ ] 03-03-PLAN.md — Blade wiring: form action/method/@csrf, @error inline errors, old() repopulation, flash banners, Alpine loading state, social link URLs
 - [ ] 03-04-PLAN.md — Human verification checkpoint: validate all 6 CONTACT requirements in browser with log mailer
@@ -89,7 +89,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/3 | In Progress|  |
 | 2. Core UI Sections | 5/5 | Complete   | 2026-03-25 |
-| 3. Contact Form Backend | 0/4 | Not started | - |
+| 3. Contact Form Backend | 1/4 | In Progress|  |
 | 4. Polish and Deploy | 0/TBD | Not started | - |
 
 ---
