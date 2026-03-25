@@ -50,7 +50,7 @@ Plans:
 - [x] 02-A-PLAN.md — Dependency setup: npm install swiper + aos, rewrite app.js with DOMContentLoaded init, add Devicon CDN to layout, create placeholder assets
 - [x] 02-B-PLAN.md — Hero + About sections: name/role/photo/CTA in hero; bio/photo/CV-download in about; AOS animations on both
 - [x] 02-C-PLAN.md — Skills carousel: $skills array in PortfolioController, Swiper markup with Devicon icons and pagination
-- [ ] 02-D-PLAN.md — Projects section: populate projects.json with schema + 4 sample entries, responsive grid with hover overlay cards
+- [x] 02-D-PLAN.md — Projects section: populate projects.json with schema + 4 sample entries, responsive grid with hover overlay cards
 - [ ] 02-E-PLAN.md — Contact UI + visual checkpoint: form fields + social links in contact section, final build, human verification of all 5 sections
 **UI hint**: yes
 

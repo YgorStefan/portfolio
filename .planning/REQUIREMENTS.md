@@ -43,11 +43,11 @@
 
 ### Seção Projetos
 
-- [ ] **PROJ-01**: Projetos carregados dinamicamente de `data/projects.json`
-- [ ] **PROJ-02**: Grid responsivo de cards de projeto (3 colunas desktop, 2 tablet, 1 mobile)
-- [ ] **PROJ-03**: Cada card exibe imagem, título, descrição e tags de tecnologia
-- [ ] **PROJ-04**: Hover overlay com links para demo e repositório
-- [ ] **PROJ-05**: Schema do `projects.json` documentado (título, descrição, imagem, url, repo, tags)
+- [x] **PROJ-01**: Projetos carregados dinamicamente de `data/projects.json`
+- [x] **PROJ-02**: Grid responsivo de cards de projeto (3 colunas desktop, 2 tablet, 1 mobile)
+- [x] **PROJ-03**: Cada card exibe imagem, título, descrição e tags de tecnologia
+- [x] **PROJ-04**: Hover overlay com links para demo e repositório
+- [x] **PROJ-05**: Schema do `projects.json` documentado (título, descrição, imagem, url, repo, tags)
 
 ### Seção Contato
 
@@ -123,11 +123,11 @@
 | SKILL-02 | Phase 2 | Complete |
 | SKILL-03 | Phase 2 | Complete |
 | SKILL-04 | Phase 2 | Complete |
-| PROJ-01 | Phase 2 | Pending |
-| PROJ-02 | Phase 2 | Pending |
-| PROJ-03 | Phase 2 | Pending |
-| PROJ-04 | Phase 2 | Pending |
-| PROJ-05 | Phase 2 | Pending |
+| PROJ-01 | Phase 2 | Complete |
+| PROJ-02 | Phase 2 | Complete |
+| PROJ-03 | Phase 2 | Complete |
+| PROJ-04 | Phase 2 | Complete |
+| PROJ-05 | Phase 2 | Complete |
 | CONTACT-01 | Phase 3 | Pending |
 | CONTACT-02 | Phase 3 | Pending |
 | CONTACT-03 | Phase 3 | Pending |

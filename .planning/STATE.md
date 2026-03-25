@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: Ready to execute
-stopped_at: Completed 02-core-ui-sections-C-PLAN.md
-last_updated: "2026-03-25T00:20:15.791Z"
+stopped_at: Completed 02-core-ui-sections-D-PLAN.md
+last_updated: "2026-03-25T00:23:25.797Z"
 progress:
   total_phases: 4
   completed_phases: 1
   total_plans: 8
-  completed_plans: 6
+  completed_plans: 7
 ---
 
 # Project State
@@ -24,7 +24,7 @@ See: .planning/PROJECT.md (updated 2026-03-24)
 ## Current Position
 
 Phase: 02 (core-ui-sections) — EXECUTING
-Plan: 4 of 5
+Plan: 5 of 5
 
 ## Performance Metrics
 
@@ -52,6 +52,7 @@ Plan: 4 of 5
 | Phase 02-core-ui-sections PA | 5 | 2 tasks | 6 files |
 | Phase 02-core-ui-sections PB | 1 | 2 tasks | 1 files |
 | Phase 02-core-ui-sections PC | 4 | 2 tasks | 2 files |
+| Phase 02-core-ui-sections PD | 3 | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -78,6 +79,9 @@ Recent decisions affecting current work:
 - [Phase 02-core-ui-sections]: CV download button uses download attribute to force file download instead of browser tab open
 - [Phase 02-core-ui-sections]: Skills array defined in PortfolioController (not JSON/config) for single edit-point simplicity
 - [Phase 02-core-ui-sections]: .swiper-skills selector in blade matches Plan A app.js init target — swiper-pagination placed as sibling of swiper-wrapper per Swiper DOM requirement
+- [Phase 02-core-ui-sections]: onerror on card img hides broken image icon — project images are stubs until user supplies real images in public/images/projects/
+- [Phase 02-core-ui-sections]: AOS delay capped at min($i * 100, 400) — prevents 600ms+ waits on later project cards
+- [Phase 02-core-ui-sections]: group/group-hover Tailwind pattern for projects hover overlay — pure CSS zero JavaScript
 
 ### Pending Todos
 
@@ -90,6 +94,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-25T00:20:15.786Z
-Stopped at: Completed 02-core-ui-sections-C-PLAN.md
+Last session: 2026-03-25T00:23:25.793Z
+Stopped at: Completed 02-core-ui-sections-D-PLAN.md
 Resume file: None
