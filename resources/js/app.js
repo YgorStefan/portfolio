@@ -1,9 +1,9 @@
 import Alpine from 'alpinejs';
 import intersect from '@alpinejs/intersect';
 import Swiper from 'swiper';
-import { Pagination, Autoplay } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -21,15 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Swiper skills carousel — selector .swiper-skills matches Plan C markup
     new Swiper('.swiper-skills', {
-        modules: [Pagination, Autoplay],
+        modules: [Navigation, Autoplay],
         loop: true,
         autoplay: {
             delay: 3000,
             disableOnInteraction: false,
         },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
+        navigation: {
+            nextEl: '.swiper-skills-next',
+            prevEl: '.swiper-skills-prev',
         },
         breakpoints: {
             320: { slidesPerView: 2, spaceBetween: 12 },

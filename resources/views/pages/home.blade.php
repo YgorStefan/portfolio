@@ -127,22 +127,40 @@
             </div>
 
             {{-- Swiper carousel -- SKILL-01, SKILL-02, SKILL-03, SKILL-04 --}}
-            <div class="swiper swiper-skills" data-aos="fade-up" data-aos-delay="100">
-                <div class="swiper-wrapper">
-                    @foreach($skills as $skill)
-                        <div class="swiper-slide">
-                            <div class="bg-bg-primary border border-gray-800 rounded-xl p-6
-                                        flex flex-col items-center gap-3
-                                        hover:border-accent/50 hover:-translate-y-1
-                                        transition-all duration-300 cursor-default">
-                                {{-- Devicon icon -- SKILL-02 --}}
-                                <i class="{{ $skill['icon'] }} text-5xl"></i>
-                                <span class="text-sm font-medium text-gray-300">{{ $skill['name'] }}</span>
+            <div class="relative" data-aos="fade-up" data-aos-delay="100">
+                {{-- Prev/next buttons outside .swiper to avoid Swiper's absolute-position conflicts --}}
+                <button class="swiper-skills-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10
+                               bg-gray-800 hover:bg-accent border border-gray-700 hover:border-accent
+                               text-white rounded-full w-9 h-9 flex items-center justify-center
+                               transition-colors duration-200 hidden md:flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                    </svg>
+                </button>
+                <button class="swiper-skills-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10
+                               bg-gray-800 hover:bg-accent border border-gray-700 hover:border-accent
+                               text-white rounded-full w-9 h-9 flex items-center justify-center
+                               transition-colors duration-200 hidden md:flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </button>
+                <div class="swiper swiper-skills">
+                    <div class="swiper-wrapper">
+                        @foreach($skills as $skill)
+                            <div class="swiper-slide">
+                                <div class="bg-bg-primary border border-gray-800 rounded-xl p-6
+                                            flex flex-col items-center gap-3
+                                            hover:border-accent/50 hover:-translate-y-1
+                                            transition-all duration-300 cursor-default">
+                                    {{-- Devicon icon -- SKILL-02 --}}
+                                    <i class="{{ $skill['icon'] }} text-5xl"></i>
+                                    <span class="text-sm font-medium text-gray-300">{{ $skill['name'] }}</span>
+                                </div>
                             </div>
-                        </div>
-                    @endforeach
+                        @endforeach
+                    </div>
                 </div>
-                <div class="swiper-pagination"></div>
             </div>
 
         </div>
