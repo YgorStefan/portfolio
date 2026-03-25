@@ -128,7 +128,7 @@
 
             {{-- Swiper carousel -- SKILL-01, SKILL-02, SKILL-03, SKILL-04 --}}
             {{-- .swiper-skills selector must match new Swiper('.swiper-skills') in app.js --}}
-            <div class="swiper swiper-skills overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper swiper-skills pb-10" data-aos="fade-up" data-aos-delay="100">
                 <div class="swiper-wrapper">
                     @foreach($skills as $skill)
                         <div class="swiper-slide">
