@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "title": "Portfólio Pessoal",
+    "description": "Site de portfólio desenvolvido com Laravel 12, Tailwind CSS v4 e Alpine.js. Dark theme com animações AOS e carrossel Swiper para exibição das habilidades técnicas.",
+    "image": "portfolio.jpg",
+    "url": null,
+    "repo": "https://github.com/ygor-stefankowski/portfolio",
+    "tags": ["PHP", "Laravel", "Tailwind CSS", "Alpine.js", "JavaScript"]
+  },
+  {
+    "title": "Sistema de Gestão",
+    "description": "Aplicação web para gestão de recursos internos com autenticação, CRUD completo e relatórios em PDF gerados via Laravel.",
+    "image": "sistema-gestao.jpg",
+    "url": null,
+    "repo": null,
+    "tags": ["PHP", "Laravel", "MySQL", "Blade", "Bootstrap"]
+  },
+  {
+    "title": "API RESTful",
+    "description": "API construída com Laravel para consumo por aplicações mobile e SPA. Autenticação via Laravel Sanctum, documentação com Swagger.",
+    "image": "api-restful.jpg",
+    "url": null,
+    "repo": "https://github.com/ygor-stefankowski/api-exemplo",
+    "tags": ["PHP", "Laravel", "REST API", "Sanctum", "MySQL"]
+  },
+  {
+    "title": "Dashboard Analytics",
+    "description": "Painel administrativo responsivo com gráficos interativos, filtros dinâmicos via Alpine.js e exportação de dados para CSV.",
+    "image": "dashboard.jpg",
+    "url": null,
+    "repo": null,
+    "tags": ["JavaScript", "Alpine.js", "Tailwind CSS", "PHP", "Chart.js"]
+  }
+]
