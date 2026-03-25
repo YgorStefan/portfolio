@@ -16,6 +16,8 @@
     },
     "dependencies": {
         "@alpinejs/intersect": "^3.15.8",
-        "alpinejs": "^3.15.8"
+        "alpinejs": "^3.15.8",
+        "aos": "^2.3.4",
+        "swiper": "^12.1.3"
     }
 }
