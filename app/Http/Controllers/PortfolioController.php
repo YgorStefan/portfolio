@@ -14,22 +14,19 @@ class PortfolioController extends Controller
             true
         ));
 
-        // SKILL-03: Skills defined as configurable array in controller.
-        // Edit this array to update the Skills carousel without touching Blade files.
-        // MUST have >= 10 entries for Swiper loop to work at 1024px (slidesPerView: 5, loop: true).
         $skills = [
-            ['name' => 'PHP',         'icon' => 'devicon-php-plain colored'],
-            ['name' => 'Laravel',     'icon' => 'devicon-laravel-plain colored'],
-            ['name' => 'JavaScript',  'icon' => 'devicon-javascript-plain colored'],
-            ['name' => 'TypeScript',  'icon' => 'devicon-typescript-plain colored'],
-            ['name' => 'Vue.js',      'icon' => 'devicon-vuejs-plain colored'],
-            ['name' => 'MySQL',       'icon' => 'devicon-mysql-plain colored'],
-            ['name' => 'Git',         'icon' => 'devicon-git-plain colored'],
-            ['name' => 'Docker',      'icon' => 'devicon-docker-plain colored'],
+            ['name' => 'PHP', 'icon' => 'devicon-php-plain colored'],
+            ['name' => 'Laravel', 'icon' => 'devicon-laravel-plain colored'],
+            ['name' => 'JavaScript', 'icon' => 'devicon-javascript-plain colored'],
+            ['name' => 'TypeScript', 'icon' => 'devicon-typescript-plain colored'],
+            ['name' => 'Vue.js', 'icon' => 'devicon-vuejs-plain colored'],
+            ['name' => 'MySQL', 'icon' => 'devicon-mysql-plain colored'],
+            ['name' => 'Git', 'icon' => 'devicon-git-plain colored'],
+            ['name' => 'Docker', 'icon' => 'devicon-docker-plain colored'],
             ['name' => 'TailwindCSS', 'icon' => 'devicon-tailwindcss-plain colored'],
-            ['name' => 'HTML5',       'icon' => 'devicon-html5-plain colored'],
-            ['name' => 'CSS3',        'icon' => 'devicon-css3-plain colored'],
-            ['name' => 'Linux',       'icon' => 'devicon-linux-plain'],
+            ['name' => 'HTML5', 'icon' => 'devicon-html5-plain colored'],
+            ['name' => 'CSS3', 'icon' => 'devicon-css3-plain colored'],
+            ['name' => 'Linux', 'icon' => 'devicon-linux-plain'],
         ];
 
         return view('pages.home', compact('projects', 'skills'));

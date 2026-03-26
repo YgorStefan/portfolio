@@ -12,14 +12,12 @@ window.Alpine = Alpine;
 Alpine.start();
 
 document.addEventListener('DOMContentLoaded', () => {
-    // AOS — must be DOMContentLoaded; calling AOS.init() at module scope fails silently in Vite
     AOS.init({
         duration: 700,
         once: true,
         offset: 80,
     });
 
-    // Swiper skills carousel — selector .swiper-skills matches Plan C markup
     new Swiper('.swiper-skills', {
         modules: [Navigation, Autoplay],
         loop: true,
