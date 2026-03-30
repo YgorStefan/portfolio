@@ -1,4 +1,4 @@
-# 🚀 Portfólio Profissional - Ygor Stefan
+# 🚀 Portfólio Profissional - Ygor Stefankowski da Silva
 
 Bem-vindo ao repositório do meu portfólio pessoal. Este projeto é uma vitrine moderna, performática e elegante do meu trabalho, habilidades e trajetória profissional.
 
