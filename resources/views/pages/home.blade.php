@@ -1,37 +1,37 @@
 @extends('layouts.app')
 
 @section('content')
-    {{-- Phase 1: section stubs with correct IDs. Phase 2 fills content. --}}
+    {{-- Seções principais --}}
 
     <section id="hero" class="min-h-screen flex items-center justify-center bg-bg-primary relative overflow-hidden pt-16">
         <div class="container mx-auto px-6 text-center">
 
-            {{-- Profile photo -- HERO-02 --}}
+            {{-- Foto de perfil --}}
             <div class="mb-6" data-aos="fade-down">
                 <img src="{{ asset('images/profile.jpg') }}"
                      alt="Ygor Stefankowski da Silva"
                      class="w-36 h-36 rounded-full object-cover border-4 border-accent mx-auto shadow-lg shadow-accent/20">
             </div>
 
-            {{-- Name -- HERO-01 --}}
+            {{-- Nome --}}
             <h1 class="text-4xl md:text-6xl font-bold text-white mb-3"
                 data-aos="fade-up" data-aos-delay="100">
                 Ygor Stefankowski da Silva
             </h1>
 
-            {{-- Role -- HERO-01 --}}
+            {{-- Cargo --}}
             <p class="text-xl md:text-2xl text-accent font-semibold mb-4"
                data-aos="fade-up" data-aos-delay="200">
                 Desenvolvedor Full Stack
             </p>
 
-            {{-- Tagline --}}
+            {{-- Slogan --}}
             <p class="text-gray-400 text-lg mb-10 max-w-xl mx-auto"
                data-aos="fade-up" data-aos-delay="300">
                 Criando soluções web modernas com PHP, Laravel e JavaScript.
             </p>
 
-            {{-- CTA buttons -- HERO-03 --}}
+            {{-- Botões de ação --}}
             <div class="flex flex-col sm:flex-row gap-4 justify-center"
                  data-aos="fade-up" data-aos-delay="400">
                 <a href="#contact"
@@ -44,7 +44,7 @@
                 </a>
             </div>
 
-            {{-- Scroll indicator --}}
+            {{-- Indicador de rolagem --}}
             <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce"
                  data-aos="fade-up" data-aos-delay="600">
                 <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -59,16 +59,16 @@
     <section id="about" class="py-24 bg-bg-primary">
         <div class="container mx-auto px-6">
 
-            {{-- Section heading --}}
+            {{-- Título da seção --}}
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Sobre Mim</h2>
                 <div class="w-16 h-1 bg-accent mx-auto rounded-full"></div>
             </div>
 
-            {{-- Two-column layout: text left, photo right --}}
+            {{-- Layout em duas colunas --}}
             <div class="flex flex-col lg:flex-row items-center gap-12 max-w-5xl mx-auto">
 
-                {{-- Bio text column -- ABOUT-01 --}}
+                {{-- Texto bio --}}
                 <div class="flex-1" data-aos="fade-right">
                     <p class="text-gray-300 text-lg leading-relaxed mb-6">
                         Olá! Sou o Ygor, desenvolvedor full stack apaixonado por criar experiências
@@ -86,7 +86,7 @@
                         sólidas e continuar crescendo como profissional.
                     </p>
 
-                    {{-- CV download button -- ABOUT-03 --}}
+                    {{-- Download do CV --}}
                     <a href="{{ asset('files/Currículo Ygor Stefankowski da Silva.pdf') }}"
                        download="Curriculo-Ygor-Stefankowski-da-Silva.pdf"
                        class="inline-flex items-center gap-2 border border-accent text-accent hover:bg-accent hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:-translate-y-0.5">
@@ -99,13 +99,13 @@
                     </a>
                 </div>
 
-                {{-- Profile photo column -- ABOUT-02 --}}
+                {{-- Coluna da foto --}}
                 <div class="flex-shrink-0" data-aos="fade-left">
                     <div class="relative">
                         <img src="{{ asset('images/profile.jpg') }}"
                              alt="Ygor Stefankowski da Silva"
                              class="w-64 h-64 rounded-2xl object-cover border-2 border-accent/30 shadow-xl shadow-accent/10">
-                        {{-- Decorative accent border offset --}}
+                        {{-- Borda decorativa --}}
                         <div class="absolute -bottom-3 -right-3 w-full h-full border-2 border-accent/20 rounded-2xl -z-10"></div>
                     </div>
                 </div>
@@ -117,7 +117,7 @@
     <section id="skills" class="py-24 bg-bg-card">
         <div class="container mx-auto px-6">
 
-            {{-- Section heading --}}
+            {{-- Título da seção --}}
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Habilidades</h2>
                 <div class="w-16 h-1 bg-accent mx-auto rounded-full"></div>
@@ -126,17 +126,17 @@
                 </p>
             </div>
 
-            {{-- Swiper carousel -- SKILL-01, SKILL-02, SKILL-03, SKILL-04 --}}
+            {{-- Carrossel de habilidades --}}
             <div class="relative" data-aos="fade-up" data-aos-delay="100">
                 {{-- Prev/next buttons outside .swiper to avoid Swiper's absolute-position conflicts --}}
                 <style>
-                    /* Força o pointer e exibe no mobile (sobrescreve 'hidden' caso haja resquícios do tailwind) */
+                    /* Exibição mobile das setas */
                     .swiper-skills-prev, .swiper-skills-next {
                         display: flex !important;
                         cursor: pointer !important;
                         z-index: 30 !important;
                     }
-                    /* No mobile ajusta as setas para não saírem da tela */
+                    /* Ajuste mobile */
                     @media (max-width: 768px) {
                         .swiper-skills-prev { transform: translateY(-50%) translateX(0px) !important; }
                         .swiper-skills-next { transform: translateY(-50%) translateX(0px) !important; }
@@ -166,7 +166,7 @@
                                             flex flex-col items-center gap-3
                                             hover:border-accent/50 hover:-translate-y-1
                                             transition-all duration-300 cursor-default">
-                                    {{-- Devicon icon -- SKILL-02 --}}
+                                    {{-- Ícone devicon --}}
                                     <i class="{{ $skill['icon'] }} text-5xl"></i>
                                     <span class="text-sm font-medium text-gray-300">{{ $skill['name'] }}</span>
                                 </div>
@@ -182,7 +182,7 @@
     <section id="projects" class="py-24 bg-bg-primary">
         <div class="container mx-auto px-6">
 
-            {{-- Section heading --}}
+            {{-- Título da seção --}}
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Projetos</h2>
                 <div class="w-16 h-1 bg-accent mx-auto rounded-full"></div>
@@ -191,19 +191,19 @@
                 </p>
             </div>
 
-            {{-- Projects grid -- PROJ-01, PROJ-02 --}}
-            {{-- 1 col mobile, 2 col tablet (md), 3 col desktop (lg) --}}
+            {{-- Grade de projetos --}}
+            {{-- Grid responsivo --}}
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 @foreach($projects as $i => $project)
-                    {{-- Card -- PROJ-03, PROJ-04 --}}
-                    {{-- AOS stagger capped at 400ms to avoid long waits on large grids --}}
+                    {{-- Card do projeto --}}
+                    {{-- Delay do AOS --}}
                     <div class="relative group overflow-hidden rounded-xl bg-bg-card border border-gray-800
                                 hover:border-accent/30 transition-all duration-300 hover:-translate-y-1"
                          data-aos="fade-up"
                          data-aos-delay="{{ min($i * 100, 400) }}">
 
-                        {{-- Project image with scale-on-hover -- PROJ-03 --}}
+                        {{-- Imagem do projeto --}}
                         <div class="aspect-video bg-gray-800 overflow-hidden">
                             <img src="{{ asset('images/projects/' . $project['image']) }}"
                                  alt="{{ $project['title'] }}"
@@ -211,12 +211,12 @@
                                  onerror="this.style.display='none'">
                         </div>
 
-                        {{-- Card body -- PROJ-03 --}}
+                        {{-- Corpo do card --}}
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-white mb-2">{{ $project['title'] }}</h3>
                             <p class="text-gray-400 text-sm leading-relaxed mb-4">{{ $project['description'] }}</p>
 
-                            {{-- Tech tags -- PROJ-03 --}}
+                            {{-- Tags de tecnologia --}}
                             <div class="flex flex-wrap gap-2">
                                 @foreach($project['tags'] as $tag)
                                     <span class="text-xs font-medium text-accent bg-accent/10 border border-accent/20
@@ -227,7 +227,7 @@
                             </div>
                         </div>
 
-                        {{-- Hover overlay with demo + repo links -- PROJ-04 --}}
+                        {{-- Overlay de links --}}
                         <div class="absolute inset-0 bg-bg-primary/90 opacity-0 group-hover:opacity-100
                                     transition-opacity duration-300 flex items-center justify-center gap-4">
                             @if($project['url'])
@@ -272,7 +272,7 @@
 
             <div class="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
-                {{-- Contact form -- CONTACT-01 (UI only; backend wired in Phase 3) --}}
+                {{-- Formulário de contato --}}
                 <div data-aos="fade-right">
                     <form action="{{ route('contact.send') }}"
                           method="POST"
@@ -282,21 +282,21 @@
                           @submit="submitting = true">
                         @csrf
 
-                        {{-- Success banner — CONTACT-04 --}}
+                        {{-- Banner de sucesso --}}
                         @if(session('success'))
                             <div class="bg-green-900/30 border border-green-500/30 text-green-400 rounded-lg px-4 py-3 text-sm">
                                 {{ session('success') }}
                             </div>
                         @endif
 
-                        {{-- Error banner (mail dispatch failure) — CONTACT-04 --}}
+                        {{-- Banner de erro --}}
                         @if(session('error'))
                             <div class="bg-red-900/30 border border-red-500/30 text-red-400 rounded-lg px-4 py-3 text-sm">
                                 {{ session('error') }}
                             </div>
                         @endif
 
-                        {{-- Validation error summary — a11y fallback --}}
+                        {{-- Erros de validação --}}
                         @if($errors->any())
                             <div class="bg-red-900/30 border border-red-500/30 text-red-400 rounded-lg px-4 py-3 text-sm">
                                 Por favor, corrija os erros abaixo.
@@ -391,7 +391,7 @@
                     </form>
                 </div>
 
-                {{-- Social links -- CONTACT-06 --}}
+                {{-- Links sociais --}}
                 <div class="space-y-8" data-aos="fade-left">
 
                     <div>
@@ -442,7 +442,7 @@
                                 </div>
                             </a>
 
-                            {{-- Email --}}
+                            {{-- E-mail --}}
                             <a href="#contact" onclick="setTimeout(() => { document.getElementById('name').focus() }, 50)"
                                class="flex items-center gap-4 text-gray-400 hover:text-accent transition-colors duration-300 group">
                                 <span class="w-12 h-12 bg-bg-primary rounded-xl flex items-center justify-center
@@ -461,7 +461,7 @@
                         </div>
                     </div>
 
-                    {{-- Availability note --}}
+                    {{-- Disponibilidade --}}
                     <div class="bg-bg-primary rounded-xl p-6 border border-gray-700">
                         <div class="flex items-center gap-3 mb-2">
                             <span class="w-3 h-3 rounded-full bg-green-400 animate-pulse"></span>

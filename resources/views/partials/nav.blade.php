@@ -2,12 +2,12 @@
     <nav x-data="{ open: false }" class="fixed top-0 left-0 right-0 z-50 bg-gray-950/90 backdrop-blur-sm border-b border-gray-800">
         <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
 
-            {{-- Logo / name --}}
+            {{-- Logo --}}
             <a href="#hero" class="font-bold text-white text-lg tracking-tight hover:text-accent transition-colors">
                 YS
             </a>
 
-            {{-- Desktop nav links --}}
+            {{-- Links desktop --}}
             <ul class="hidden md:flex items-center gap-8">
                 <li><a href="#about" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Sobre</a></li>
                 <li><a href="#skills" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Skills</a></li>
@@ -15,25 +15,25 @@
                 <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Contato</a></li>
             </ul>
 
-            {{-- Hamburger button (mobile only) --}}
+            {{-- Botão menu (mobile) --}}
             <button
                 @click="open = !open"
                 class="md:hidden text-gray-300 hover:text-white transition-colors p-2"
                 aria-label="Abrir menu"
                 :aria-expanded="open"
             >
-                {{-- Hamburger icon (shown when closed) --}}
+                {{-- Ícone menu --}}
                 <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
-                {{-- Close icon (shown when open) --}}
+                {{-- Ícone fechar --}}
                 <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
         </div>
 
-        {{-- Mobile menu (shown when open) --}}
+        {{-- Menu mobile --}}
         <div
             x-show="open"
             x-transition:enter="transition ease-out duration-200"

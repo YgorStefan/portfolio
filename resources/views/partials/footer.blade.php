@@ -1,6 +1,6 @@
-{{-- Wrapper shares Alpine state between sentinel and back-to-top button --}}
+{{-- Estado compartilhado entre sentinel e botão voltar ao topo --}}
 <div x-data="{ show: false }">
-    {{-- Sentinel observed by Alpine intersect (pointer-events-none so it doesn't block page clicks) --}}
+    {{-- Sentinel observado pelo Alpine intersect --}}
     <div
         id="scroll-sentinel"
         x-intersect:leave="show = true"
@@ -8,7 +8,7 @@
         class="absolute top-0 left-0 h-1 w-1 pointer-events-none"
     ></div>
 
-    {{-- Back-to-top button — sibling of sentinel so it does NOT inherit pointer-events-none --}}
+    {{-- Botão voltar ao topo --}}
     <button
         x-show="show"
         x-transition:enter="transition ease-out duration-300"
