@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: Melhorias & Correções
 status: executing
-stopped_at: Completed 05-02-PLAN.md
-last_updated: "2026-04-02T16:17:10.935Z"
+stopped_at: Completed 05-03-PLAN.md — Phase 05 concluída
+last_updated: "2026-04-02T17:00:00.000Z"
 last_activity: 2026-04-02
 progress:
   total_phases: 3
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 3
-  completed_plans: 2
+  completed_plans: 3
 ---
 
 # Project State
@@ -24,14 +24,11 @@ See: .planning/PROJECT.md (updated 2026-04-01)
 
 ## Current Position
 
-Phase: 05 (bug-fixes-new-skills) — EXECUTING
-Plan: 3 of 3
-Status: Ready to execute
-Last activity: 2026-04-02
-
+Phase: 05 (bug-fixes-new-skills) — COMPLETED ✓
+Phase: 06 — dark/light mode — NEXT
 Progress: `[ Phase 5 ] [ Phase 6 ] [ Phase 7 ]`
-         `[          ] [          ] [          ]`
-          0/3 phases complete
+         `[  DONE ✓ ] [          ] [          ]`
+          1/3 phases complete
 
 ## Performance Metrics
 
@@ -119,11 +116,12 @@ Recent decisions affecting current work:
 - [Phase 05-bug-fixes-new-skills]: Classe 'colored' removida do devicon LinkedIn — substituída por text-gray-400 group-hover:text-accent para consistência com demais ícones sociais
 - [Phase 05-bug-fixes-new-skills]: hover:-translate-y-1 substituído por hover:shadow-md hover:shadow-accent/20 no skill card — translate causa clipping da borda superior dentro do swiper-slide
 - [Phase 05-bug-fixes-new-skills]: IA/ML usa SVG inline com stroke paths sem URLs externas — seguro para CSP e sem dependência de CDN adicional
+- [Phase 05-bug-fixes-new-skills]: onerror nos project cards requer this.onerror=null para evitar loop infinito quando o data URI de fallback também falha
+- [Phase 06-dark-light-mode]: Abordagem escolhida — Alpine.js + localStorage + classe .dark no html. @variant dark em app.css. Script inline no head para evitar flash de tema.
 
 ### Pending Todos
 
 - Definir provider de analytics (Fathom vs Plausible) antes de planejar Phase 7
-- Confirmar abordagem do dark mode: Alpine.js + localStorage vs sistema de classes CSS do Tailwind v4
 
 ### Blockers/Concerns
 
@@ -131,6 +129,6 @@ None blocking Phase 5.
 
 ## Session Continuity
 
-Last session: 2026-04-02T16:17:10.931Z
-Stopped at: Completed 05-02-PLAN.md
+Last session: 2026-04-02T17:00:00.000Z
+Stopped at: Phase 05 concluída (todos os 3 planos). Próxima: Phase 06 — dark/light mode
 Resume file: None
