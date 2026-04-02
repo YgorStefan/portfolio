@@ -14,7 +14,8 @@ Alpine.start();
 document.addEventListener('DOMContentLoaded', () => {
     AOS.init({
         duration: 700,
-        once: true,
+        once: false,
+        mirror: true,
         offset: 80,
     });
 
