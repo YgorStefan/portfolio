@@ -98,6 +98,15 @@ None - no external service configuration required.
 - Plan 02 pode adicionar o toggle Alpine.js na navbar que escreve no localStorage e alterna a classe .dark no html
 - Nenhum bloqueador
 
+## Self-Check: PASSED
+
+- FOUND: resources/views/layouts/app.blade.php
+- FOUND: resources/css/app.css
+- FOUND: .planning/phases/06-dark-light-mode/06-01-SUMMARY.md
+- FOUND: commit 0096b50 (Task 1)
+- FOUND: commit b4828f9 (Task 2)
+- FOUND: commit 45ce67a (metadata)
+
 ---
 *Phase: 06-dark-light-mode*
 *Completed: 2026-04-02*

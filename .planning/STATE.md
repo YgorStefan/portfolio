@@ -2,13 +2,13 @@
 gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: Melhorias & Correções
-status: Phase complete — ready for verification
+status: Executing Phase 07
 stopped_at: "Completed 06-02-PLAN.md — toggle sol/lua navbar + classes dark: em home e footer"
-last_updated: "2026-04-02T17:22:49.542Z"
+last_updated: "2026-04-02T21:57:54.052Z"
 progress:
   total_phases: 3
   completed_phases: 2
-  total_plans: 5
+  total_plans: 6
   completed_plans: 5
 ---
 
@@ -19,12 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-04-01)
 
 **Core value:** Causar uma primeira impressão profissional e memorável a recrutadores e clientes, comunicando competência técnica full stack de forma visual e direta.
-**Current focus:** Phase 06 — dark-light-mode
+**Current focus:** Phase 07 — 404-page-analytics
 
 ## Current Position
 
-Phase: 06 (dark-light-mode) — EXECUTING
-Plan: 2 of 2
+Phase: 07 (404-page-analytics) — EXECUTING
+Plan: 1 of 1
 Phase: 06 — dark/light mode — NEXT
 Progress: `[ Phase 5 ] [ Phase 6 ] [ Phase 7 ]`
          `[  DONE ✓ ] [          ] [          ]`
@@ -125,7 +125,7 @@ Recent decisions affecting current work:
 
 ### Pending Todos
 
-- Definir provider de analytics (Fathom vs Plausible) antes de planejar Phase 7
+- (resolvido) Provider de analytics: Cloudflare Web Analytics — DNS já no Cloudflare, ativar no painel antes do deploy
 
 ### Blockers/Concerns
 

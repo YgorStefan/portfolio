@@ -96,3 +96,12 @@ None - no external service configuration required.
 ---
 *Phase: 06-dark-light-mode*
 *Completed: 2026-04-02*
+
+## Self-Check: PASSED
+
+- FOUND: resources/views/partials/nav.blade.php
+- FOUND: resources/views/pages/home.blade.php
+- FOUND: resources/views/partials/footer.blade.php
+- FOUND: .planning/phases/06-dark-light-mode/06-02-SUMMARY.md
+- FOUND: commit 6f3be42 (Task 1 — toggle navbar)
+- FOUND: commit dc75d48 (Task 2 — classes dark: home + footer)

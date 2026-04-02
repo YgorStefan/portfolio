@@ -66,8 +66,10 @@ Plans:
 **Success Criteria** (what must be TRUE):
   1. Acessar qualquer URL inexistente no domínio exibe uma página 404 customizada com mensagem amigável e link de retorno à home
   2. A página 404 mantém o visual do portfólio (navbar, estilo Tailwind) em vez de exibir a tela de erro padrão do Laravel/servidor
-  3. O painel de analytics (Fathom ou Plausible) registra pageviews do site sem instalar cookies no navegador do visitante
-**Plans**: TBD
+  3. O Cloudflare Web Analytics registra pageviews do site sem instalar cookies no navegador do visitante
+**Plans**: 1 plano
+Plans:
+- [ ] 07-01-PLAN.md — Página 404 customizada (ERR-01) + script Cloudflare Analytics no layout (ANA-01)
 
 ## Progress
 
@@ -79,7 +81,7 @@ Plans:
 | 4. Polish and Deploy | v1.0 | 2/2 | Complete | 2026-04-02 |
 | 5. Bug Fixes & New Skills | v2.0 | 2/3 | In Progress|  |
 | 6. Dark/Light Mode | v2.0 | 2/2 | Complete   | 2026-04-02 |
-| 7. 404 Page & Analytics | v2.0 | 0/? | Not started | - |
+| 7. 404 Page & Analytics | v2.0 | 0/1 | Not started | - |
 
 ---
 *v1.0 shipped 2026-04-02 — 4 phases, 14 plans, 41/41 requirements*
