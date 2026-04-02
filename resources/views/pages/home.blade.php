@@ -208,7 +208,7 @@
                             <img src="{{ asset('images/projects/' . $project['image']) }}"
                                  alt="{{ $project['title'] }}"
                                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                 onerror="this.style.display='none'">
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'450\' viewBox=\'0 0 800 450\'%3E%3Crect width=\'800\' height=\'450\' fill=\'%231e293b\'/%3E%3Ctext x=\'400\' y=\'225\' font-family=\'monospace\' font-size=\'14\' fill=\'%2338bdf8\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E&lt;/projeto&gt;%3C/text%3E%3C/svg%3E'">
                         </div>
 
                         {{-- Corpo do card --}}

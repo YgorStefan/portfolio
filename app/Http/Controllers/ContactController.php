@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\ContactFormMail;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
@@ -25,6 +26,7 @@ class ContactController extends Controller
             return redirect('/#contact')
                 ->with('success', 'Mensagem enviada com sucesso! Responderei em breve.');
         } catch (\Throwable $e) {
+            Log::error('ContactForm mail failed: ' . $e->getMessage());
             return redirect('/#contact')
                 ->withInput()
                 ->with('error', 'Erro ao enviar mensagem. Tente novamente mais tarde.');
