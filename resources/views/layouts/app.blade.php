@@ -29,11 +29,9 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     @production
-    {{-- Cloudflare Web Analytics — sem cookies, GDPR-compliant --}}
-    {{-- Instruções: obter token em Cloudflare Dashboard → Analytics & Logs → Web Analytics → Add a site --}}
-    {{-- Substituir SEU_TOKEN_AQUI pelo token gerado no painel da Cloudflare antes do deploy --}}
-    <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
-        data-cf-beacon='{"token": "SEU_TOKEN_AQUI"}'></script>
+    {{-- Umami Analytics — sem cookies, GDPR-compliant --}}
+    {{-- Instruções: obter o data-website-id em umami.is → Dashboard → Add website → Get tracking code --}}
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="0a7dce55-bf69-4c69-8642-0a5e7efea7ae"></script>
     @endproduction
 </head>
 <body class="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-white antialiased transition-colors duration-150" x-data>
