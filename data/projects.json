@@ -3,56 +3,24 @@
     "title": "Portfólio Pessoal",
     "description": "Site de portfólio desenvolvido com Laravel 12, Tailwind CSS v4 e Alpine.js. Dark theme com animações AOS e carrossel Swiper para exibição das habilidades técnicas.",
     "image": "portfolio.jpg",
-    "url": null,
+    "url": "https://ygorstefan.com",
     "repo": "https://github.com/YgorStefan/portifolio",
-    "tags": [
-      "PHP",
-      "Laravel",
-      "Tailwind CSS",
-      "Alpine.js",
-      "JavaScript"
-    ]
+    "tags": ["PHP", "Laravel", "Tailwind CSS", "Alpine.js", "JavaScript"]
   },
   {
-    "title": "Sistema de Gestão",
-    "description": "Aplicação web para gestão de recursos internos com autenticação, CRUD completo e relatórios em PDF gerados via Laravel.",
-    "image": "sistema-gestao.jpg",
+    "title": "Sistema CRM",
+    "description": "Sistema de gestão de clientes com PHP, MySQL e Chart.js",
+    "image": "crm.jpg",
     "url": null,
-    "repo": null,
-    "tags": [
-      "PHP",
-      "Laravel",
-      "MySQL",
-      "Blade",
-      "Bootstrap"
-    ]
+    "repo": "https://github.com/YgorStefan/crm",
+    "tags": ["PHP", "MySQL", "PDO", "Tailwind CSS", "JavaScript", "Chart.js"]
   },
   {
-    "title": "API RESTful",
-    "description": "API construída com Laravel para consumo por aplicações mobile e SPA. Autenticação via Laravel Sanctum, documentação com Swagger.",
-    "image": "api-restful.jpg",
+    "title": "E-commerce",
+    "description": "Plataforma e-commerce full stack com Next.js, NestJS e PostgreSQL",
+    "image": "ecommerce.jpg",
     "url": null,
-    "repo": "https://github.com/YgorStefan/portifolio",
-    "tags": [
-      "PHP",
-      "Laravel",
-      "REST API",
-      "Sanctum",
-      "MySQL"
-    ]
-  },
-  {
-    "title": "Dashboard Analytics",
-    "description": "Painel administrativo responsivo com gráficos interativos, filtros dinâmicos via Alpine.js e exportação de dados para CSV.",
-    "image": "dashboard.jpg",
-    "url": null,
-    "repo": null,
-    "tags": [
-      "JavaScript",
-      "Alpine.js",
-      "Tailwind CSS",
-      "PHP",
-      "Chart.js"
-    ]
+    "repo": "https://github.com/YgorStefan/ecommerce",
+    "tags": ["NestJS", "TypeScript", "Next.js", "PostgreSQL", "Tailwind CSS", "Docker"]
   }
 ]
