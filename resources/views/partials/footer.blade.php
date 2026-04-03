@@ -28,7 +28,7 @@
     </button>
 </div>
 
-<footer class="border-t border-gray-200 dark:border-gray-800 py-8 mt-16">
+<footer class="bg-white/90 dark:bg-gray-950/90 backdrop-blur-sm border-t border-gray-200 dark:border-gray-800 py-8 mt-16 transition-colors duration-150">
     <div class="max-w-6xl mx-auto px-6 text-center">
         <p class="text-gray-500 text-sm">
             &copy; {{ date('Y') }} Ygor Stefankowski da Silva. Todos os direitos reservados.
