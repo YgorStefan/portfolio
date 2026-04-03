@@ -8,7 +8,7 @@
     <meta property="og:title" content="Ygor Stefankowski da Silva — Desenvolvedor Full Stack">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ config('app.url') }}">
-    <meta property="og:image" content="{{ asset('images/profile.jpg') }}">
+    <meta property="og:image" content="{{ asset('images/cartoon.jpeg') }}">
     <meta property="og:description" content="Portfólio de Ygor Stefankowski da Silva, Desenvolvedor Full Stack.">
     <script>
         (function() {
