@@ -128,21 +128,7 @@
             </div>
 
             {{-- Carrossel de habilidades --}}
-            <div class="relative" data-aos="fade-up" data-aos-delay="100">
-                {{-- Prev/next buttons outside .swiper to avoid Swiper's absolute-position conflicts --}}
-                <style>
-                    /* Exibição mobile das setas */
-                    .swiper-skills-prev, .swiper-skills-next {
-                        display: flex !important;
-                        cursor: pointer !important;
-                        z-index: 30 !important;
-                    }
-                    /* Ajuste mobile */
-                    @media (max-width: 768px) {
-                        .swiper-skills-prev { transform: translateY(-50%) translateX(0px) !important; }
-                        .swiper-skills-next { transform: translateY(-50%) translateX(0px) !important; }
-                    }
-                </style>
+            <div class="relative overflow-hidden md:overflow-visible" data-aos="fade-up" data-aos-delay="100">
                 <button class="swiper-skills-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10
                                bg-gray-200 dark:bg-gray-800 hover:bg-accent border border-gray-300 dark:border-gray-700 hover:border-accent
                                text-gray-700 dark:text-white rounded-full w-9 h-9 items-center justify-center

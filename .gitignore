@@ -31,3 +31,7 @@ Thumbs.db
 database/*.sqlite
 database/*.sqlite-journal
 .env.deploy
+
+# Scripts de deploy com dados do servidor
+push.sh
+push.ps1

@@ -50,3 +50,15 @@ footer {
 .swiper-skills .swiper-button-prev {
     display: none;
 }
+
+.swiper-skills-prev,
+.swiper-skills-next {
+    display: flex !important;
+    cursor: pointer !important;
+    z-index: 30 !important;
+}
+
+@media (max-width: 768px) {
+    .swiper-skills-prev { transform: translateY(-50%) translateX(0px) !important; }
+    .swiper-skills-next { transform: translateY(-50%) translateX(0px) !important; }
+}
