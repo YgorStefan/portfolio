@@ -1,7 +1,7 @@
 [
   {
     "title": "Portfólio",
-    "description": "Site de portfólio desenvolvido com Laravel 12, Tailwind CSS v4 e Alpine.js. Dark theme com animações AOS e carrossel Swiper para exibição das habilidades técnicas.",
+    "description": "Site desse portfólio desenvolvido com Laravel 12, Tailwind CSS v4 e Alpine.js. Dark theme com animações AOS e carrossel Swiper para exibição das minhas habilidades.",
     "image": "portfolio.jpg",
     "url": "https://ygorstefan.com",
     "repo": "https://github.com/YgorStefan/portifolio",
@@ -15,7 +15,7 @@
   },
   {
     "title": "CRM (Customer Relationship Management)",
-    "description": "Sistema de gestão de clientes com PHP, MySQL e Chart.js",
+    "description": "Sistema de gestão de clientes com PHP, MySQL e Chart.js. Um projeto em que precisei fazer para uma empresa de vendas.",
     "image": "crm.jpg",
     "url": "https://ygorstefan.com/crm",
     "repo": "https://github.com/YgorStefan/crm",
@@ -44,7 +44,7 @@
   },
   {
     "title": "E-commerce",
-    "description": "Plataforma e-commerce full stack com Next.js, NestJS e PostgreSQL",
+    "description": "Plataforma e-commerce full stack com Next.js, NestJS e PostgreSQL.",
     "image": "ecommerce.jpg",
     "url": "https://frontend-nine-mocha-28.vercel.app/",
     "repo": "https://github.com/YgorStefan/ecommerce",
