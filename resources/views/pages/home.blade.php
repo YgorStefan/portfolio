@@ -131,7 +131,7 @@
             <div class="relative overflow-hidden md:overflow-visible" data-aos="fade-up" data-aos-delay="100">
                 <button class="swiper-skills-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10
                                bg-gray-200 dark:bg-gray-800 hover:bg-accent border border-gray-300 dark:border-gray-700 hover:border-accent
-                               text-gray-700 dark:text-white rounded-full w-9 h-9 items-center justify-center
+                               text-gray-700 dark:text-white rounded-full w-9 h-9 flex items-center justify-center
                                transition-colors duration-200">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
@@ -194,36 +194,36 @@
                 <p class="text-gray-500 dark:text-gray-400 mt-4 max-w-xl mx-auto">
                     Alguns dos projetos que desenvolvi ou estou desenvolvendo, clique para ver o código ou a demo.
                 </p>
-            </div>
 
-            {{-- Banner de acesso restrito --}}
-            <div class="max-w-2xl mx-auto mb-14" data-aos="fade-up" data-aos-delay="100">
-                <div class="relative flex items-center gap-4 bg-accent/5 border border-accent/30 rounded-2xl px-6 py-4
-                            hover:border-accent/60 hover:bg-accent/10 transition-all duration-300 group">
+                {{-- Banner de acesso restrito --}}
+                <div class="max-w-2xl mx-auto mt-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative inline-flex items-center gap-4 bg-accent/5 border border-accent/30 rounded-2xl px-6 py-4
+                                hover:border-accent/60 hover:bg-accent/10 transition-all duration-300 group">
 
-                    {{-- Ícone de cadeado --}}
-                    <div class="flex-shrink-0 w-11 h-11 rounded-xl bg-accent/15 flex items-center justify-center
-                                group-hover:bg-accent/25 transition-colors duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-accent" fill="none"
-                             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M7 11V7a5 5 0 0 1 10 0v4"/>
-                        </svg>
+                        {{-- Ícone de cadeado --}}
+                        <div class="flex-shrink-0 w-11 h-11 rounded-xl bg-accent/15 flex items-center justify-center
+                                    group-hover:bg-accent/25 transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-accent" fill="none"
+                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                            </svg>
+                        </div>
+
+                        {{-- Texto --}}
+                        <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                            Para uma experiência completa e testes de funcionalidades restritas,
+                            <a href="#contact"
+                               onclick="setTimeout(() => { document.getElementById('name').focus() }, 50)"
+                               class="font-semibold text-accent hover:underline underline-offset-2 transition-all duration-200">
+                                peça o login e senha
+                            </a>.
+                        </p>
+
+                        {{-- Brilho decorativo --}}
+                        <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-accent/0 via-accent/5 to-accent/0
+                                    opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                     </div>
-
-                    {{-- Texto --}}
-                    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                        Para uma experiência completa e testes de funcionalidades restritas,
-                        <a href="#contact"
-                           onclick="setTimeout(() => { document.getElementById('name').focus() }, 50)"
-                           class="font-semibold text-accent hover:underline underline-offset-2 transition-all duration-200">
-                            me peça o login e senha
-                        </a>.
-                    </p>
-
-                    {{-- Brilho decorativo --}}
-                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-accent/0 via-accent/5 to-accent/0
-                                opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                 </div>
             </div>
 
