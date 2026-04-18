@@ -290,6 +290,109 @@
         </div>
     </section>
 
+    {{-- Seção de Minijogos --}}
+    <section id="minijogos" class="py-24 bg-bg-card">
+        <div class="container mx-auto px-6">
+
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Minijogos</h2>
+                <div class="w-16 h-1 bg-accent mx-auto rounded-full"></div>
+                <p class="text-gray-500 dark:text-gray-400 mt-4 max-w-xl mx-auto">
+                    4 jogos construídos com stacks diferentes para demonstrar versatilidade Front-end.
+                    Cada um foi desenvolvido do zero com suas próprias tecnologias.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                {{-- Tech Match --}}
+                <div class="bg-bg-primary rounded-xl border border-gray-200 dark:border-gray-800 p-6
+                            hover:border-accent/30 hover:-translate-y-1 transition-all duration-300 flex flex-col"
+                     data-aos="fade-up" data-aos-delay="0">
+                    <div class="text-3xl mb-3">🃏</div>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Tech Match</h3>
+                    <div class="flex flex-wrap gap-1.5 mb-3">
+                        @foreach(['Vue 3', 'Vite', 'CSS Puro'] as $tag)
+                            <span class="text-xs font-medium text-accent bg-accent/10 border border-accent/20 px-2 py-0.5 rounded-md">{{ $tag }}</span>
+                        @endforeach
+                    </div>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed flex-1">
+                        Jogo da memória com logos de tecnologias. Animação de flip em CSS puro, cronômetro e contador de tentativas.
+                    </p>
+                    <a href="/games/memory-vue/" target="_blank" rel="noopener noreferrer"
+                       class="mt-4 inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent/90
+                              text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-300">
+                        ▶ Jogar
+                    </a>
+                </div>
+
+                {{-- Techdle --}}
+                <div class="bg-bg-primary rounded-xl border border-gray-200 dark:border-gray-800 p-6
+                            hover:border-accent/30 hover:-translate-y-1 transition-all duration-300 flex flex-col"
+                     data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-3xl mb-3">🟩</div>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Techdle</h3>
+                    <div class="flex flex-wrap gap-1.5 mb-3">
+                        @foreach(['React', 'TypeScript', 'Tailwind'] as $tag)
+                            <span class="text-xs font-medium text-accent bg-accent/10 border border-accent/20 px-2 py-0.5 rounded-md">{{ $tag }}</span>
+                        @endforeach
+                    </div>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed flex-1">
+                        Clone do Wordle com palavras do universo tech. Teclado virtual, validação de letras e histórico salvo no LocalStorage.
+                    </p>
+                    <a href="/games/termo-react/" target="_blank" rel="noopener noreferrer"
+                       class="mt-4 inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent/90
+                              text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-300">
+                        ▶ Jogar
+                    </a>
+                </div>
+
+                {{-- Dino Bug Run --}}
+                <div class="bg-bg-primary rounded-xl border border-gray-200 dark:border-gray-800 p-6
+                            hover:border-accent/30 hover:-translate-y-1 transition-all duration-300 flex flex-col"
+                     data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-3xl mb-3">🦖</div>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Dino Bug Run</h3>
+                    <div class="flex flex-wrap gap-1.5 mb-3">
+                        @foreach(['JavaScript', 'Canvas', 'ES6+'] as $tag)
+                            <span class="text-xs font-medium text-accent bg-accent/10 border border-accent/20 px-2 py-0.5 rounded-md">{{ $tag }}</span>
+                        @endforeach
+                    </div>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed flex-1">
+                        Endless runner em Canvas puro com OOP, detecção de colisão AABB e velocidade progressiva. Pule com Espaço ou toque.
+                    </p>
+                    <a href="/games/runner-vanilla/" target="_blank" rel="noopener noreferrer"
+                       class="mt-4 inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent/90
+                              text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-300">
+                        ▶ Jogar
+                    </a>
+                </div>
+
+                {{-- Typing Defense --}}
+                <div class="bg-bg-primary rounded-xl border border-gray-200 dark:border-gray-800 p-6
+                            hover:border-accent/30 hover:-translate-y-1 transition-all duration-300 flex flex-col"
+                     data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-3xl mb-3">⌨️</div>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Typing Defense</h3>
+                    <div class="flex flex-wrap gap-1.5 mb-3">
+                        @foreach(['Svelte', 'Vite', 'CSS Animations'] as $tag)
+                            <span class="text-xs font-medium text-accent bg-accent/10 border border-accent/20 px-2 py-0.5 rounded-md">{{ $tag }}</span>
+                        @endforeach
+                    </div>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed flex-1">
+                        Aliens caem com comandos de terminal. Digite o comando correto para destruí-los antes que cheguem ao servidor.
+                    </p>
+                    <a href="/games/typing-svelte/" target="_blank" rel="noopener noreferrer"
+                       class="mt-4 inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent/90
+                              text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-300">
+                        ▶ Jogar
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="py-24 bg-bg-card">
         <div class="container mx-auto px-6">
 
