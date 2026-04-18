@@ -24,8 +24,8 @@ Homestead.yaml
 Thumbs.db
 
 # GSD Workflow
-/.planning
-/.claude
+.planning
+.claude
 
 # Databases
 database/*.sqlite
