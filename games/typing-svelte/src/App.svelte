@@ -14,6 +14,9 @@
   let arenaHeight = 400
   let lastTime = 0
   let fallSpeed = 0.4
+  const INITIAL_SPEED = 0.4
+  $: speedMultiplier = fallSpeed / INITIAL_SPEED
+  $: speedColor = speedMultiplier < 2 ? '#22c55e' : speedMultiplier < 3 ? '#eab308' : '#ef4444'
   let shuffledCommands = shuffleCommands()
   let cmdIndex = 0
 
@@ -107,7 +110,7 @@
     if (mobileInputEl) mobileInputEl.value = ''
     spawnEnemy()
     spawnId = setInterval(spawnEnemy, SPAWN_INTERVAL_MS)
-    speedTimerId = setInterval(() => { fallSpeed += 0.05 }, 15000)
+    speedTimerId = setInterval(() => { fallSpeed = Math.min(fallSpeed + 0.1, 3.0) }, 10000)
     loopId = requestAnimationFrame(gameLoop)
   }
 
@@ -116,7 +119,7 @@
     window.addEventListener('keydown', handleKeydown)
     spawnEnemy()
     spawnId = setInterval(spawnEnemy, SPAWN_INTERVAL_MS)
-    speedTimerId = setInterval(() => { fallSpeed += 0.05 }, 15000)
+    speedTimerId = setInterval(() => { fallSpeed = Math.min(fallSpeed + 0.1, 3.0) }, 10000)
     loopId = requestAnimationFrame(gameLoop)
   })
 
@@ -148,6 +151,7 @@
   <div class="hud">
     <span>❤️ {$lives}</span>
     <span>🏆 {$score}</span>
+    <span style="color: {speedColor}">⚡ {speedMultiplier.toFixed(1)}×</span>
   </div>
 
   <div class="arena" style="height: {arenaHeight}px">
