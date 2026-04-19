@@ -1,3 +1,5 @@
+import { normalizeDelta } from './physics.js'
+
 const INSECT_TYPES = ['beetle', 'mosquito', 'cockroach', 'cricket', 'spider']
 
 function drawBeetle(ctx, x, y, w, h) {
@@ -105,7 +107,7 @@ export class Obstacle {
     this.speed = speed
   }
 
-  update() { this.x -= this.speed }
+  update(delta) { this.x -= this.speed * normalizeDelta(delta) }
   isOffScreen() { return this.x + this.width < 0 }
 
   draw(ctx) {

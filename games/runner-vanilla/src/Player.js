@@ -1,3 +1,5 @@
+import { normalizeDelta } from './physics.js'
+
 export class Player {
   constructor(canvas) {
     this.canvas = canvas
@@ -21,34 +23,30 @@ export class Player {
     }
   }
 
-  update() {
-    this.vy += this.gravity
-    this.y += this.vy
+  update(delta) {
+    const dt = normalizeDelta(delta)
+    this.vy += this.gravity * dt
+    this.y += this.vy * dt
     if (this.y >= this.groundY) {
       this.y = this.groundY
       this.vy = 0
       this.isOnGround = true
     }
     if (this.isOnGround) {
-      this.frameTimer++
+      this.frameTimer += dt
       if (this.frameTimer >= 8) { this.frame = (this.frame + 1) % 2; this.frameTimer = 0 }
     }
   }
 
   draw(ctx) {
     const { x, y, width: w, height: h } = this
-    // body
     ctx.fillStyle = '#2d6a1f'
     ctx.fillRect(x + 4, y + 14, w - 8, h - 14)
-    // head
     ctx.fillRect(x + 8, y, w - 10, 18)
-    // eye white
     ctx.fillStyle = '#fff'
     ctx.fillRect(x + w - 10, y + 4, 8, 8)
-    // eye pupil
     ctx.fillStyle = '#111'
     ctx.fillRect(x + w - 8, y + 6, 4, 4)
-    // legs
     ctx.fillStyle = '#3a8a28'
     if (!this.isOnGround) {
       ctx.fillRect(x + 8,  y + h - 12, 8, 16)
