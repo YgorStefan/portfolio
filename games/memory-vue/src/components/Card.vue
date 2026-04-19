@@ -18,7 +18,8 @@ function handleClick() {
     <div class="card-inner">
       <div class="card-front">❓</div>
       <div class="card-back">
-        <span class="emoji">{{ card.emoji }}</span>
+        <span v-if="card.svg" class="card-svg" v-html="card.svg"></span>
+        <span v-else class="card-emoji">{{ card.emoji }}</span>
         <span class="label">{{ card.label }}</span>
       </div>
     </div>
@@ -70,4 +71,6 @@ function handleClick() {
   font-size: 0.65rem;
   color: #94a3b8;
 }
+.card-svg { display: flex; align-items: center; justify-content: center; }
+.card-svg svg { width: 48px; height: 48px; }
 </style>

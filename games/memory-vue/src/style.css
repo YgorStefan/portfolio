@@ -1,6 +1,6 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 body {
-  background: #0f172a;
+  background: #0d0a1a;
   color: #f1f5f9;
   font-family: system-ui, sans-serif;
   min-height: 100vh;
@@ -13,21 +13,21 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background: #1e293b;
-  border-bottom: 1px solid #334155;
+  background: #1a1230;
+  border-bottom: 1px solid #2d1f5e;
 }
 .header-left { flex: 1; }
 .header-right { flex: 1; }
 .title-area { display: flex; flex-direction: column; align-items: center; gap: 8px; }
-.back-link { color: #94a3b8; text-decoration: none; font-size: 0.9rem; }
-.back-link:hover { color: #38bdf8; }
+.back-link { color: #a78bfa; text-decoration: none; font-size: 0.9rem; }
+.back-link:hover { color: #a78bfa; }
 h1 { font-size: 1.5rem; font-weight: 700; }
 
 .badges { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; }
 .badge {
-  background: rgba(56,189,248,0.1);
-  border: 1px solid rgba(56,189,248,0.3);
-  color: #38bdf8;
+  background: rgba(139,92,246,0.1);
+  border: 1px solid rgba(139,92,246,0.3);
+  color: #8b5cf6;
   padding: 2px 10px;
   border-radius: 999px;
   font-size: 0.75rem;
@@ -43,7 +43,7 @@ main {
   gap: 1.5rem;
 }
 
-.stats { display: flex; gap: 2rem; font-size: 1rem; color: #94a3b8; flex-wrap: wrap; justify-content: center; }
+.stats { display: flex; gap: 2rem; font-size: 1rem; color: #a78bfa; flex-wrap: wrap; justify-content: center; }
 
 .win-banner {
   background: #052e16;
@@ -60,8 +60,8 @@ main {
 }
 
 .btn {
-  background: #38bdf8;
-  color: #0f172a;
+  background: #8b5cf6;
+  color: #0d0a1a;
   border: none;
   padding: 0.5rem 1.5rem;
   border-radius: 8px;
@@ -69,4 +69,22 @@ main {
   cursor: pointer;
   font-size: 0.9rem;
 }
-.btn:hover { background: #7dd3fc; }
+.btn:hover { background: #a78bfa; }
+
+@media (max-width: 480px) {
+  .header { padding: 0.75rem 1rem; flex-wrap: wrap; gap: 0.5rem; }
+  .header-left, .header-right { flex: 0 0 auto; }
+  .title-area { width: 100%; order: -1; }
+  h1 { font-size: 1.2rem; }
+}
+.btn-sm {
+  padding: 3px 12px;
+  font-size: 0.8rem;
+  background: transparent;
+  color: #8b5cf6;
+  border: 1px solid #8b5cf6;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn-sm:hover { background: rgba(139,92,246,0.15); color: #a78bfa; }

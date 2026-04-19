@@ -74,10 +74,10 @@ const timeFormatted = computed(() => {
   <div class="app">
     <header class="header">
       <div class="header-left">
-        <a href="/" class="back-link">← Portfólio</a>
+        <a href="javascript:void(0)" class="back-link" onclick="if(window.opener&&!window.opener.closed){window.opener.focus();window.close();}else{location.href='/';}">← Voltar para o Portfólio</a>
       </div>
       <div class="title-area">
-        <h1>🃏 Tech Match</h1>
+        <h1>🃏 Jogo da Memória Tech</h1>
         <div class="badges">
           <span class="badge">Vue 3</span>
           <span class="badge">Vite</span>
@@ -90,8 +90,8 @@ const timeFormatted = computed(() => {
     <main>
       <div class="stats">
         <span>⏱ {{ timeFormatted }}</span>
-        <span>🎯 {{ attempts }} tentativas</span>
-        <span>✅ {{ matchedCount / 2 }}/8 pares</span>
+        <span>🃏 {{ matchedCount / 2 }}/8 pares</span>
+        <button class="btn btn-sm" @click="resetGame">↺ Reiniciar</button>
       </div>
 
       <div v-if="allMatched" class="win-banner">
@@ -100,8 +100,6 @@ const timeFormatted = computed(() => {
       </div>
 
       <Board :cards="cards" :disabled="isBlocked" @flip="flipCard" />
-
-      <button class="btn" @click="resetGame">🔄 Reiniciar</button>
     </main>
   </div>
 </template>
