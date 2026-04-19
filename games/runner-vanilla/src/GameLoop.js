@@ -1,5 +1,8 @@
 import { Player } from './Player.js'
 import { Obstacle } from './Obstacle.js'
+import { normalizeDelta, calcSpeedMultiplier, shouldSpawn, FRAME_MS } from './physics.js'
+
+const SPAWN_INTERVAL_MS = 1500
 
 export class GameLoop {
   constructor(canvas) {
@@ -9,18 +12,18 @@ export class GameLoop {
     this.obstacles = []
     this.score = 0
     this.speedMultiplier = 1.0
-    this.frameCount = 0
+    this.spawnAccumulator = 0
+    this.lastTime = 0
     this.running = false
     this.isGameOver = false
     this.animId = null
-    this.spawnInterval = 90
     this.lastScore = parseInt(localStorage.getItem('dino_last_score') || '0')
   }
 
   get speed() { return this.speedMultiplier * 5 }
 
   _updateSpeed() {
-    this.speedMultiplier = 1.0 + Math.floor(this.score / 1500) * 0.5
+    this.speedMultiplier = calcSpeedMultiplier(this.score)
   }
 
   _checkCollision(a, b) {
@@ -32,24 +35,26 @@ export class GameLoop {
     )
   }
 
-  _update() {
-    this.frameCount++
-    this.score++
+  _update(delta) {
+    const dt = normalizeDelta(delta)
+    this.score += dt
     this._updateSpeed()
-    this.player.update()
+    this.player.update(delta)
 
-    if (this.frameCount % this.spawnInterval === 0) {
+    this.spawnAccumulator += delta
+    if (shouldSpawn(this.spawnAccumulator, SPAWN_INTERVAL_MS)) {
       this.obstacles.push(new Obstacle(this.canvas, this.speed))
+      this.spawnAccumulator -= SPAWN_INTERVAL_MS
     }
 
-    this.obstacles.forEach(o => o.update())
+    this.obstacles.forEach(o => o.update(delta))
     this.obstacles = this.obstacles.filter(o => !o.isOffScreen())
 
     for (const obs of this.obstacles) {
       if (this._checkCollision(this.player, obs)) {
         this.isGameOver = true
         this.running = false
-        localStorage.setItem('dino_last_score', String(this.score))
+        localStorage.setItem('dino_last_score', String(Math.floor(this.score)))
         return
       }
     }
@@ -69,7 +74,7 @@ export class GameLoop {
 
     ctx.fillStyle = '#fbbf24'
     ctx.font = 'bold 14px monospace'
-    ctx.fillText(`Score: ${this.score}`, 16, 28)
+    ctx.fillText(`Score: ${Math.floor(this.score)}`, 16, 28)
     ctx.fillText(`Vel: ${this.speedMultiplier.toFixed(1)}x`, 16, 48)
 
     if (this.isGameOver) {
@@ -81,19 +86,26 @@ export class GameLoop {
       ctx.fillText('Fim de Jogo', canvas.width / 2, canvas.height / 2 - 28)
       ctx.fillStyle = '#f1f5f9'
       ctx.font = '16px monospace'
-      ctx.fillText(`Score: ${this.score} | Último: ${this.lastScore}`, canvas.width / 2, canvas.height / 2 + 8)
+      ctx.fillText(`Score: ${Math.floor(this.score)} | Último: ${this.lastScore}`, canvas.width / 2, canvas.height / 2 + 8)
       ctx.fillText('Espaço / Toque para reiniciar', canvas.width / 2, canvas.height / 2 + 36)
       ctx.textAlign = 'left'
     }
   }
 
-  _loop() {
+  _loop(timestamp) {
     if (!this.running) return
-    this._update()
+    const delta = this.lastTime === 0 ? FRAME_MS : timestamp - this.lastTime
+    this.lastTime = timestamp
+    this._update(delta)
     this._draw()
-    this.animId = requestAnimationFrame(() => this._loop())
+    this.animId = requestAnimationFrame(ts => this._loop(ts))
   }
 
-  start() { this.running = true; this._loop() }
+  start() {
+    this.running = true
+    this.lastTime = 0
+    this.animId = requestAnimationFrame(ts => this._loop(ts))
+  }
+
   stop() { this.running = false; cancelAnimationFrame(this.animId) }
 }
