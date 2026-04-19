@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fuga do Dino</title>
-    <script type="module" crossorigin src="/games/runner-vanilla/assets/index-rHwghb3W.js"></script>
+    <script type="module" crossorigin src="/games/runner-vanilla/assets/index-8dGqTjPC.js"></script>
     <link rel="stylesheet" crossorigin href="/games/runner-vanilla/assets/index-Bj_LZkn5.css">
   </head>
   <body>
     <header class="game-header">
       <a href="javascript:void(0)" class="back-link"
-        onclick="if(window.opener&&!window.opener.closed){window.opener.focus();window.close();}else{location.href='/';}">
+        onclick="window.close(); setTimeout(function(){ if(!window.closed) location.href='/'; }, 300)">
         ← Voltar para o Portfólio
       </a>
       <div class="title-area">

@@ -1,1 +1,0 @@
-:root{--bg:#071a0d;--header-bg:#0f2a18;--accent:#22c55e;--border:#14532d;--text-muted:#4ade80}body{background:var(--bg);color:#f1f5f9;font-family:system-ui,sans-serif}@media (width<=480px){.keyboard-row{gap:3px!important}.key{min-width:26px!important;height:48px!important;font-size:.7rem!important}.grid-cell{width:48px!important;height:48px!important;font-size:1.4rem!important}}
