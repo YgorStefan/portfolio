@@ -28,6 +28,7 @@ Thumbs.db
 .claude
 /.planning
 /.claude
+/docs/superpowers
 
 # Databases
 database/*.sqlite
