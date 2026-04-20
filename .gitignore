@@ -39,3 +39,6 @@ database/*.sqlite-journal
 push.sh
 push.ps1
 deploy.sh
+
+# Superpowers CLI
+.superpowers/
