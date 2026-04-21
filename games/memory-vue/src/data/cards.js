@@ -1,14 +1,12 @@
-const CDN = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons'
-
 export const TECHS = [
-  { id: 'js',     label: 'JavaScript', img: `${CDN}/javascript/javascript-original.svg` },
+  { id: 'js',     label: 'JavaScript', img: '/games/memory-vue/icons/javascript.svg' },
   { id: 'react',  label: 'React',      emoji: '⚛️' },
   { id: 'python', label: 'Python',     emoji: '🐍' },
   { id: 'vue',    label: 'Vue',        emoji: '💚' },
   { id: 'css',    label: 'CSS',        emoji: '🎨' },
   { id: 'docker', label: 'Docker',     emoji: '🐳' },
   { id: 'git',    label: 'Git',        emoji: '🔀' },
-  { id: 'node',   label: 'Node.js',    img: `${CDN}/nodejs/nodejs-original.svg` },
+  { id: 'node',   label: 'Node.js',    img: '/games/memory-vue/icons/nodejs.svg' },
 ]
 
 export function createDeck() {
