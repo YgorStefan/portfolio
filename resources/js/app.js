@@ -55,13 +55,13 @@ Alpine.data('skillsGrid', (skills) => ({
         this.cat = cat;
         this.page = 0;
         this.showCards();
-        this.scheduleAuto();
+        this.$nextTick(() => this.scheduleAuto());
     },
 
     goTo(p) {
         this.page = Math.max(0, Math.min(p, this.totalPages - 1));
         this.showCards();
-        this.scheduleAuto();
+        this.$nextTick(() => this.scheduleAuto());
     },
 
     scheduleAuto() {
