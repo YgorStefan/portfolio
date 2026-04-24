@@ -44,18 +44,6 @@ footer {
     transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
 }
 
-.swiper-skills .swiper-button-next,
-.swiper-skills .swiper-button-prev {
-    display: none;
-}
-
-.swiper-skills-prev,
-.swiper-skills-next {
-    display: flex !important;
-    cursor: pointer !important;
-    z-index: 30 !important;
-}
-
 /* ── Skill cards — animação de entrada ── */
 .skill-card {
     opacity: 0;
