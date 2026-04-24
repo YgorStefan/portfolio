@@ -12,9 +12,10 @@ Alpine.data('skillsGrid', (skills) => ({
     cat: 'all',
     page: 0,
     perPage: 8,
-    autoMs: 4500,
+    autoMs: 5500,
     timer: null,
     cardsVisible: true,
+    started: false,
 
     get filtered() {
         return this.cat === 'all'
@@ -40,8 +41,12 @@ Alpine.data('skillsGrid', (skills) => ({
         return Array(Math.max(0, count)).fill(null);
     },
 
-    init() {
-        this.scheduleAuto();
+    init() {},
+
+    start() {
+        if (this.started) return;
+        this.started = true;
+        this.$nextTick(() => this.scheduleAuto());
     },
 
     showCards() {
