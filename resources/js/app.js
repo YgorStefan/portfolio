@@ -12,7 +12,7 @@ Alpine.data('skillsGrid', (skills) => ({
     cat: 'all',
     page: 0,
     perPage: 8,
-    autoMs: 3500,
+    autoMs: 4500,
     timer: null,
     cardsVisible: true,
 
