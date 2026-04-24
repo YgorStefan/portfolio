@@ -148,7 +148,7 @@
             </div>
 
             {{-- Grid de skills --}}
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 justify-items-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="200">
 
                 {{-- Cards reais --}}
                 <template x-for="(skill, idx) in currentPageSkills" :key="skill.name">

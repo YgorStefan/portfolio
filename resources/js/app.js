@@ -66,7 +66,11 @@ Alpine.data('skillsGrid', (skills) => ({
 
     scheduleAuto() {
         clearTimeout(this.timer);
-        if (!this.isPaginated) return;
+        if (!this.isPaginated) {
+            const bar = this.$refs.progressBar;
+            if (bar) { bar.style.transition = 'none'; bar.style.width = '0%'; }
+            return;
+        }
         this.resetProgress();
         this.timer = setTimeout(() => {
             this.page = (this.page + 1) % this.totalPages;

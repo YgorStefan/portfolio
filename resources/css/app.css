@@ -46,8 +46,6 @@ footer {
 
 /* ── Skill cards — animação de entrada ── */
 .skill-card {
-    width: 100%;
-    max-width: 140px;
     opacity: 0;
     translate: 0 14px;
     scale: 0.95;
