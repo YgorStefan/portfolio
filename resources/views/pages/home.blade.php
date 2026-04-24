@@ -45,8 +45,7 @@
             </div>
 
             {{-- Indicador de rolagem --}}
-            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce"
-                 data-aos="fade-up" data-aos-delay="600" data-aos-once="true">
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
                 <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                           d="M19 9l-7 7-7-7"/>
