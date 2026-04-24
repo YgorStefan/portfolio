@@ -117,7 +117,7 @@
 
     <section id="skills" class="py-24 bg-bg-card">
         <div class="container mx-auto px-6"
-             x-data="skillsGrid(@json($skills))">
+             x-data='skillsGrid(@json($skills))'>
 
             {{-- Título --}}
             <div class="text-center mb-16" data-aos="fade-up">
