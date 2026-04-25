@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
         offset: 80,
     });
 
-    // Partículas interativas — D-11: instanciado 3x a partir de módulo único
+    // Partículas interativas — instanciado 4x, pausam quando seção sai do viewport
     const heroParticles      = new ParticleCanvas('#hero');
     const aboutParticles     = new ParticleCanvas('#about');
     const projectParticles   = new ParticleCanvas('#projects');
