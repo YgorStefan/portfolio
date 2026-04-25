@@ -47,6 +47,7 @@
                 <div class="relative">
                     <img src="{{ asset('images/cartoon.jpeg') }}"
                          alt="Ygor Stefankowski da Silva"
+                         width="160"
                          class="w-40 rounded-2xl object-contain border-2 border-accent/30 shadow-xl shadow-accent/10">
                     {{-- Borda decorativa --}}
                     <div class="absolute -bottom-3 -right-3 w-full h-full border-2 border-accent/20 rounded-2xl -z-10"></div>

@@ -5,6 +5,8 @@
         <div class="mb-6" data-aos="fade-down" data-aos-once="true">
             <img src="{{ asset('images/profile.jpg') }}"
                  alt="Ygor Stefankowski da Silva"
+                 width="144"
+                 height="144"
                  class="w-36 h-36 rounded-full object-cover border-4 border-accent mx-auto shadow-lg shadow-accent/20">
         </div>
 

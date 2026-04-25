@@ -57,6 +57,7 @@
                     <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden">
                         <img src="{{ asset('images/' . $project['image']) }}"
                              alt="{{ $project['title'] }}"
+                             loading="lazy"
                              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                              onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'450\' viewBox=\'0 0 800 450\'%3E%3Crect width=\'800\' height=\'450\' fill=\'%231e293b\'/%3E%3Ctext x=\'400\' y=\'225\' font-family=\'monospace\' font-size=\'14\' fill=\'%2338bdf8\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E%3C%2Fprojeto%3E%3C%2Ftext%3E%3C%2Fsvg%3E'">
                     </div>
