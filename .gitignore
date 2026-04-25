@@ -69,3 +69,4 @@ deploy.sh
 /.claude
 /docs/superpowers
 .superpowers/
+.worktrees/
