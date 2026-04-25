@@ -1,4 +1,4 @@
-<section id="contact" class="py-24 bg-bg-card">
+<section id="contact" class="py-24 bg-bg-card overflow-x-hidden">
     <div class="container mx-auto px-6">
 
         {{-- Section heading --}}
