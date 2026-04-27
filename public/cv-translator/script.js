@@ -119,3 +119,35 @@ async function handleFile(file) {
         statusArea.classList.add('hidden');
     }
 }
+
+async function translateSingle(text) {
+    const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=en&dt=t&q=${encodeURIComponent(text)}`;
+    const res = await fetch(url);
+    const json = await res.json();
+    let result = '';
+    if (json && json[0]) json[0].forEach(item => { if (item[0]) result += item[0]; });
+    return result || text;
+}
+
+async function translateWithFallback(text) {
+    if (encodeURIComponent(text).length <= 1800) {
+        try { return await translateSingle(text); } catch { return text; }
+    }
+    const sentences = text.split('. ').filter(Boolean);
+    const results = await Promise.all(
+        sentences.map(s => translateSingle(s).catch(() => s))
+    );
+    return results.join('. ');
+}
+
+async function translateConcurrent(texts, onProgress) {
+    const results = new Array(texts.length);
+    const CHUNK = 3;
+    for (let i = 0; i < texts.length; i += CHUNK) {
+        const slice = texts.slice(i, i + CHUNK);
+        const translated = await Promise.all(slice.map(t => translateWithFallback(t)));
+        translated.forEach((r, j) => { results[i + j] = r; });
+        onProgress(i + slice.length, texts.length);
+    }
+    return results;
+}
