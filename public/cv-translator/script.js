@@ -123,6 +123,7 @@ async function handleFile(file) {
 async function translateSingle(text) {
     const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=en&dt=t&q=${encodeURIComponent(text)}`;
     const res = await fetch(url);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const json = await res.json();
     let result = '';
     if (json && json[0]) json[0].forEach(item => { if (item[0]) result += item[0]; });
@@ -160,11 +161,21 @@ async function processDocx(file) {
         /^word\/(header|footer)\d*\.xml$/.test(name)
     );
 
+    if (!zip.files['word/document.xml']) {
+        throw new Error('Arquivo DOCX inválido: word/document.xml não encontrado.');
+    }
+
     updateProgress(10, 'Extraindo conteúdo...');
 
     for (const filePath of xmlFilePaths) {
         const xmlStr = await zip.files[filePath].async('string');
         const xmlDoc = new DOMParser().parseFromString(xmlStr, 'application/xml');
+
+        const parseErr = xmlDoc.querySelector('parsererror');
+        if (parseErr) {
+            console.warn(`XML parse error in ${filePath}, skipping.`);
+            continue;
+        }
 
         const paragraphs = collectParagraphs(xmlDoc);
         if (!paragraphs.length) continue;
