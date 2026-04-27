@@ -53,6 +53,7 @@
                     'E-commerce' => 'project.ecommerce.desc',
                     'EduFlow Pro' => 'project.eduflow.desc',
                     'Portfólio' => 'project.portfolio.desc',
+                    'Doc Translator' => 'project.cvtranslator.desc',
                 ];
             @endphp
 

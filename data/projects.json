@@ -73,8 +73,8 @@
     ]
   },
   {
-    "title": "CV & Doc Translator",
-    "description": "Ferramenta gratuita para traduzir currículos Word (.docx) para o inglês preservando a formatação original, com exportação para PDF direto pelo navegador.",
+    "title": "Doc Translator",
+    "description": "Free tool to translate Word (.docx) resumes to English while preserving the original formatting, with PDF export directly from the browser.",
     "image": "portfolio.jpg",
     "url": "/cv-translator",
     "repo": "https://github.com/YgorStefan/portifolio",
@@ -82,7 +82,8 @@
       "JavaScript",
       "Tailwind CSS",
       "JSZip",
-      "OOXML"
+      "docx-preview",
+      "Google Translate"
     ]
   }
 ]

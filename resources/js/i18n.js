@@ -82,6 +82,10 @@ const translations = {
         pt: 'Site desse portfólio desenvolvido com Laravel 12, Tailwind CSS v4 e Alpine.js. Dark theme com animações AOS e carrossel Swiper para exibição das minhas habilidades.',
         en: 'This portfolio website built with Laravel 12, Tailwind CSS v4 and Alpine.js. Dark theme with AOS animations and Swiper carousel for showcasing my skills.'
     },
+    'project.cvtranslator.desc': {
+        pt: 'Ferramenta gratuita para traduzir documentos Word (.docx) para o inglês preservando a formatação original, com exportação para PDF direto pelo navegador.',
+        en: 'Free tool to translate Word (.docx) resumes to English while preserving the original formatting, with PDF export directly from the browser.'
+    },
 
     // ── Minijogos ──
     'minigames.title':    { pt: 'Minijogos', en: 'Mini Games' },
