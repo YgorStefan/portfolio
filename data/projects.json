@@ -75,7 +75,7 @@
   {
     "title": "Doc Translator",
     "description": "Free tool to translate Word (.docx) resumes to English while preserving the original formatting, with PDF export directly from the browser.",
-    "image": "portfolio.jpg",
+    "image": "translator.jpg",
     "url": "/cv-translator",
     "repo": "https://github.com/YgorStefan/portifolio",
     "tags": [
