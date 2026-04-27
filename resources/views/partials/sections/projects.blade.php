@@ -3,9 +3,9 @@
 
         {{-- Título da seção --}}
         <div class="text-center mb-10" data-aos="fade-up">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Projetos</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4" data-i18n="projects.title">Projetos</h2>
             <div class="w-16 h-1 bg-accent mx-auto rounded-full"></div>
-            <p class="text-gray-500 dark:text-gray-400 mt-4 max-w-xl mx-auto">
+            <p class="text-gray-500 dark:text-gray-400 mt-4 max-w-xl mx-auto" data-i18n="projects.subtitle">
                 Alguns dos projetos que desenvolvi ou estou desenvolvendo, clique para ver o código ou a demo.
             </p>
 
@@ -26,10 +26,11 @@
 
                     {{-- Texto --}}
                     <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                        Para uma experiência completa e testes de funcionalidades restritas,
+                        <span data-i18n="projects.restricted">Para uma experiência completa e testes de funcionalidades restritas,</span>
                         <a href="#contact"
                            onclick="setTimeout(() => { document.getElementById('name').focus() }, 50)"
-                           class="font-semibold text-accent hover:underline underline-offset-2 transition-all duration-200">
+                           class="font-semibold text-accent hover:underline underline-offset-2 transition-all duration-200"
+                           data-i18n="projects.ask_login">
                             peça o login e senha
                         </a>.
                     </p>
@@ -44,6 +45,16 @@
         {{-- Grade de projetos --}}
         {{-- Grid responsivo --}}
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            @php
+                $projectI18nKeys = [
+                    'CDP (Catálogo de Produtos)' => 'project.cdp.desc',
+                    'CRM (Customer Relationship Management)' => 'project.crm.desc',
+                    'E-commerce' => 'project.ecommerce.desc',
+                    'EduFlow Pro' => 'project.eduflow.desc',
+                    'Portfólio' => 'project.portfolio.desc',
+                ];
+            @endphp
 
             @foreach($projects as $i => $project)
                 {{-- Card do projeto --}}
@@ -65,7 +76,11 @@
                     {{-- Corpo do card --}}
                     <div class="p-6">
                         <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">{{ $project['title'] }}</h3>
-                        <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4">{{ $project['description'] }}</p>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4"
+                           @if(isset($projectI18nKeys[$project['title']]))
+                               data-i18n="{{ $projectI18nKeys[$project['title']] }}"
+                           @endif
+                        >{{ $project['description'] }}</p>
 
                         {{-- Tags de tecnologia --}}
                         <div class="flex flex-wrap gap-2">
@@ -98,7 +113,8 @@
                             <a href="{{ $project['repo'] }}"
                                target="_blank" rel="noopener noreferrer"
                                class="border border-[#707070] text-[#707070] dark:border-white dark:text-white hover:border-accent hover:text-accent
-                                      px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors duration-300">
+                                      px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors duration-300"
+                               data-i18n="projects.repo">
                                 Repositório
                             </a>
                         @endif

@@ -3,9 +3,27 @@ import intersect from '@alpinejs/intersect';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { ParticleCanvas } from './particles.js';
+import { translations, getLang, setLang, t, applyTranslations } from './i18n.js';
 
 Alpine.plugin(intersect);
 window.Alpine = Alpine;
+
+// Expose i18n to global scope for inline usage
+window.i18n = { translations, getLang, setLang, t };
+
+// Alpine store for reactive language state
+Alpine.store('lang', {
+    current: getLang(),
+    toggle() {
+        this.current = this.current === 'pt' ? 'en' : 'pt';
+        setLang(this.current);
+    },
+    t(key) {
+        const entry = translations[key];
+        if (!entry) return key;
+        return entry[this.current] || entry.pt || key;
+    }
+});
 
 Alpine.data('skillsGrid', (skills) => ({
     skills,
@@ -112,6 +130,10 @@ document.addEventListener('DOMContentLoaded', () => {
         mirror: true,
         offset: 80,
     });
+
+    // Apply i18n translations on first load
+    applyTranslations(getLang());
+    document.documentElement.lang = getLang() === 'pt' ? 'pt-BR' : 'en';
 
     // Partículas interativas — instanciado 4x, pausam quando seção sai do viewport
     const heroParticles      = new ParticleCanvas('#hero');

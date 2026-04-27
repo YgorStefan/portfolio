@@ -5,9 +5,9 @@
 
         {{-- Título --}}
         <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Habilidades</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4" data-i18n="skills.title">Habilidades</h2>
             <div class="w-16 h-1 bg-accent mx-auto rounded-full"></div>
-            <p class="text-gray-500 dark:text-gray-400 mt-4 max-w-xl mx-auto">
+            <p class="text-gray-500 dark:text-gray-400 mt-4 max-w-xl mx-auto" data-i18n="skills.subtitle">
                 Tecnologias e ferramentas com as quais trabalho no dia a dia.
             </p>
         </div>
@@ -15,10 +15,10 @@
         {{-- Tabs --}}
         <div class="flex justify-center flex-wrap gap-2 mb-7" data-aos="fade-up" data-aos-delay="100">
             <template x-for="tab in [
-                {key:'all',     label:'Todos'},
-                {key:'backend', label:'Backend'},
-                {key:'frontend',label:'Frontend'},
-                {key:'devops',  label:'DevOps'}
+                {key:'all',     i18n:'skills.all'},
+                {key:'backend', i18n:'skills.backend'},
+                {key:'frontend',i18n:'skills.frontend'},
+                {key:'devops',  i18n:'skills.devops'}
             ]" :key="tab.key">
                 <button
                     @click="setCategory(tab.key)"
@@ -26,7 +26,7 @@
                         ? 'bg-accent border-accent text-white shadow-[0_0_20px_rgba(59,130,246,0.4)]'
                         : 'border-gray-200 dark:border-gray-800 text-gray-500 dark:text-gray-400 hover:border-accent/50 hover:text-accent'"
                     class="px-5 py-2 rounded-full text-sm font-semibold border-[1.5px] transition-all duration-250 cursor-pointer"
-                    x-text="tab.label">
+                    x-text="$store.lang.t(tab.i18n)">
                 </button>
             </template>
         </div>

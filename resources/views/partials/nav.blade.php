@@ -30,20 +30,44 @@
             {{-- Links desktop --}}
             <ul class="hidden md:flex items-center gap-8">
                 <li><a href="#about"
-                        class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium">Sobre</a>
+                        class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium"
+                        data-i18n="nav.about">Sobre</a>
                 </li>
                 <li><a href="#skills"
-                        class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium">Habilidades</a>
+                        class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium"
+                        data-i18n="nav.skills">Habilidades</a>
                 </li>
                 <li><a href="#projects"
-                        class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium">Projetos</a>
+                        class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium"
+                        data-i18n="nav.projects">Projetos</a>
                 </li>
                 <li><a href="#minijogos"
-                        class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium">Minijogos</a>
+                        class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium"
+                        data-i18n="nav.minigames">Minijogos</a>
                 </li>
                 <li><a href="#contact"
-                        class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium">Contato</a>
+                        class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium"
+                        data-i18n="nav.contact">Contato</a>
                 </li>
+
+                {{-- Toggle de idioma (desktop) --}}
+                <li>
+                    <button @click="$store.lang.toggle()"
+                            class="relative inline-flex items-center h-6 px-2 rounded-full cursor-pointer
+                                   bg-gray-300 dark:bg-gray-700
+                                   hover:bg-gray-400 dark:hover:bg-gray-600
+                                   transition-colors duration-200 gap-1"
+                            :aria-label="$store.lang.current === 'pt' ? 'Switch to English' : 'Mudar para Português'"
+                            role="switch"
+                            :aria-checked="$store.lang.current === 'en'">
+                        <span class="text-xs font-bold leading-none transition-colors duration-200"
+                              :class="$store.lang.current === 'pt' ? 'text-white' : 'text-gray-500 dark:text-gray-400'">PT</span>
+                        <span class="text-gray-500 dark:text-gray-400 text-xs leading-none">/</span>
+                        <span class="text-xs font-bold leading-none transition-colors duration-200"
+                              :class="$store.lang.current === 'en' ? 'text-white' : 'text-gray-500 dark:text-gray-400'">EN</span>
+                    </button>
+                </li>
+
                 {{-- Toggle de tema (desktop) --}}
                 <li>
                     <button @click="dark = !dark" :aria-checked="dark" role="switch" aria-label="Alternar tema" class="relative inline-flex items-center w-12 h-6 rounded-full cursor-pointer
@@ -68,8 +92,8 @@
                 </li>
             </ul>
 
-            {{-- Controles mobile: tema + menu --}}
-            <div class="flex items-center gap-2 flex-shrink-0 md:hidden">
+            {{-- Controles mobile: tema + idioma + menu --}}
+            <div class="flex items-center gap-2 shrink-0 md:hidden">
 
                 {{-- Toggle de tema (mobile) --}}
                 <button @click="dark = !dark" :aria-checked="dark" role="switch" aria-label="Alternar tema"
@@ -88,6 +112,22 @@
                                   d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
                         </svg>
                     </span>
+                </button>
+
+                {{-- Toggle de idioma (mobile) --}}
+                <button @click="$store.lang.toggle()"
+                        class="relative inline-flex items-center h-6 px-2 rounded-full cursor-pointer
+                               bg-gray-300 dark:bg-gray-700
+                               hover:bg-gray-400 dark:hover:bg-gray-600
+                               transition-colors duration-200 gap-1"
+                        :aria-label="$store.lang.current === 'pt' ? 'Switch to English' : 'Mudar para Português'"
+                        role="switch"
+                        :aria-checked="$store.lang.current === 'en'">
+                    <span class="text-xs font-bold leading-none transition-colors duration-200"
+                          :class="$store.lang.current === 'pt' ? 'text-white' : 'text-gray-500 dark:text-gray-400'">PT</span>
+                    <span class="text-gray-500 dark:text-gray-400 text-xs leading-none">/</span>
+                    <span class="text-xs font-bold leading-none transition-colors duration-200"
+                          :class="$store.lang.current === 'en' ? 'text-white' : 'text-gray-500 dark:text-gray-400'">EN</span>
                 </button>
 
                 {{-- Botão menu (mobile) --}}
@@ -115,19 +155,24 @@
             class="md:hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 transition-colors duration-150">
             <ul class="px-6 py-4 flex flex-col gap-4">
                 <li><a href="#about" @click="open = false"
-                        class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium block py-2">Sobre</a>
+                        class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium block py-2"
+                        data-i18n="nav.about">Sobre</a>
                 </li>
                 <li><a href="#skills" @click="open = false"
-                        class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium block py-2">Skills</a>
+                        class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium block py-2"
+                        data-i18n="nav.skills">Habilidades</a>
                 </li>
                 <li><a href="#projects" @click="open = false"
-                        class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium block py-2">Projetos</a>
+                        class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium block py-2"
+                        data-i18n="nav.projects">Projetos</a>
                 </li>
                 <li><a href="#minijogos" @click="open = false"
-                        class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium block py-2">Minijogos</a>
+                        class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium block py-2"
+                        data-i18n="nav.minigames">Minijogos</a>
                 </li>
                 <li><a href="#contact" @click="open = false"
-                        class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium block py-2">Contato</a>
+                        class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium block py-2"
+                        data-i18n="nav.contact">Contato</a>
                 </li>
             </ul>
         </div>

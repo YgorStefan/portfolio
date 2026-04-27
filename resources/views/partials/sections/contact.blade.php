@@ -3,9 +3,9 @@
 
         {{-- Section heading --}}
         <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Contato</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4" data-i18n="contact.title">Contato</h2>
             <div class="w-16 h-1 bg-accent mx-auto rounded-full"></div>
-            <p class="text-gray-500 dark:text-gray-400 mt-4 max-w-xl mx-auto">
+            <p class="text-gray-500 dark:text-gray-400 mt-4 max-w-xl mx-auto" data-i18n="contact.subtitle">
                 Tem um projeto em mente? Me mande uma mensagem!
             </p>
         </div>
@@ -38,13 +38,13 @@
 
                     {{-- Erros de validação --}}
                     @if($errors->any())
-                        <div class="bg-red-900/30 border border-red-500/30 text-red-400 rounded-lg px-4 py-3 text-sm">
+                        <div class="bg-red-900/30 border border-red-500/30 text-red-400 rounded-lg px-4 py-3 text-sm" data-i18n="contact.errors">
                             Por favor, corrija os erros abaixo.
                         </div>
                     @endif
 
                     <div>
-                        <label for="name" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
+                        <label for="name" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2" data-i18n="contact.name">
                             Nome
                         </label>
                         <input type="text"
@@ -53,6 +53,7 @@
                                autocomplete="name"
                                value="{{ old('name') }}"
                                placeholder="Seu nome completo"
+                               data-i18n-placeholder="contact.name_ph"
                                class="w-full bg-bg-primary border rounded-lg px-4 py-3 text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-1 transition-colors duration-300 {{ $errors->has('name') ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : 'border-gray-300 dark:border-gray-700 focus:border-accent focus:ring-accent' }}">
                         @error('name')
                             <p class="mt-1 text-sm text-red-400">{{ $message }}</p>
@@ -60,7 +61,7 @@
                     </div>
 
                     <div>
-                        <label for="email" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
+                        <label for="email" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2" data-i18n="contact.email">
                             E-mail
                         </label>
                         <input type="email"
@@ -76,7 +77,7 @@
                     </div>
 
                     <div>
-                        <label for="subject" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
+                        <label for="subject" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2" data-i18n="contact.subject">
                             Assunto
                         </label>
                         <input type="text"
@@ -85,6 +86,7 @@
                                autocomplete="off"
                                value="{{ old('subject') }}"
                                placeholder="Sobre o que você quer falar?"
+                               data-i18n-placeholder="contact.subject_ph"
                                class="w-full bg-bg-primary border rounded-lg px-4 py-3 text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-1 transition-colors duration-300 {{ $errors->has('subject') ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : 'border-gray-300 dark:border-gray-700 focus:border-accent focus:ring-accent' }}">
                         @error('subject')
                             <p class="mt-1 text-sm text-red-400">{{ $message }}</p>
@@ -92,7 +94,7 @@
                     </div>
 
                     <div>
-                        <label for="message" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
+                        <label for="message" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2" data-i18n="contact.message">
                             Mensagem
                         </label>
                         <textarea id="message"
@@ -100,6 +102,7 @@
                                   rows="5"
                                   autocomplete="off"
                                   placeholder="Escreva sua mensagem aqui..."
+                                  data-i18n-placeholder="contact.message_ph"
                                   class="w-full bg-bg-primary border rounded-lg px-4 py-3
                                          text-gray-900 dark:text-white placeholder-gray-500 resize-none
                                          focus:outline-none focus:ring-1 transition-colors duration-300
@@ -115,7 +118,7 @@
                                    py-3 px-6 rounded-lg transition-all duration-300 hover:-translate-y-0.5
                                    focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg-card
                                    disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
-                            x-text="submitting ? 'Enviando...' : 'Enviar Mensagem'">
+                            x-text="submitting ? $store.lang.t('contact.sending') : $store.lang.t('contact.send')">
                         Enviar Mensagem
                     </button>
 
@@ -126,7 +129,7 @@
             <div class="space-y-8" data-aos="fade-up" data-aos-delay="100">
 
                 <div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6">Onde me encontrar:</h3>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6" data-i18n="contact.find_me">Onde me encontrar:</h3>
                     <div class="space-y-4">
 
                         {{-- GitHub --}}
@@ -196,9 +199,9 @@
                 <div class="bg-bg-primary rounded-xl p-6 border border-gray-300 dark:border-gray-700">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="w-3 h-3 rounded-full bg-green-400 animate-pulse"></span>
-                        <span class="text-gray-900 dark:text-white font-medium">Disponível para novas oportunidades</span>
+                        <span class="text-gray-900 dark:text-white font-medium" data-i18n="contact.available">Disponível para novas oportunidades</span>
                     </div>
-                    <p class="text-gray-500 dark:text-gray-400 text-sm">
+                    <p class="text-gray-500 dark:text-gray-400 text-sm" data-i18n="contact.available_desc">
                         Estou aberto a propostas de emprego CLT, PJ ou projetos de curto prazo. Respondo em até 24h.
                     </p>
                 </div>

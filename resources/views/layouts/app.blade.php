@@ -22,6 +22,9 @@
             if (theme === 'dark') {
                 document.documentElement.classList.add('dark');
             }
+            // Set language attribute before first paint
+            var lang = localStorage.getItem('lang') || 'pt';
+            document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
             // Remover no-transition após o primeiro paint para evitar flash de animação
             requestAnimationFrame(function () {
                 requestAnimationFrame(function () {
@@ -43,7 +46,7 @@
 <body class="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-white antialiased transition-colors duration-150"
     x-data>
     @include('partials.nav')
-    <main class="overflow-x-hidden">
+    <main>
         @yield('content')
     </main>
     @include('partials.footer')

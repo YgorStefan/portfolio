@@ -18,13 +18,15 @@
 
         {{-- Cargo --}}
         <p class="text-xl md:text-2xl text-accent font-semibold mb-4"
-           data-aos="fade-up" data-aos-delay="200" data-aos-once="true">
+           data-aos="fade-up" data-aos-delay="200" data-aos-once="true"
+           data-i18n="hero.role">
             Analista de Sistemas e Desenvolvedor Full Stack
         </p>
 
         {{-- Slogan --}}
         <p class="text-gray-500 dark:text-gray-400 text-lg mb-10 max-w-xl mx-auto"
-           data-aos="fade-up" data-aos-delay="300" data-aos-once="true">
+           data-aos="fade-up" data-aos-delay="300" data-aos-once="true"
+           data-i18n="hero.slogan">
             Criando soluções modernas com PHP, Laravel e JavaScript.
         </p>
 
@@ -32,11 +34,13 @@
         <div class="flex flex-col sm:flex-row gap-4 justify-center"
              data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
             <a href="#contact"
-               class="inline-block bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:-translate-y-0.5">
+               class="inline-block bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:-translate-y-0.5"
+               data-i18n="hero.cta">
                 Entre em Contato
             </a>
             <a href="#projects"
-               class="inline-block border border-accent text-accent hover:bg-accent hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:-translate-y-0.5">
+               class="inline-block border border-accent text-accent hover:bg-accent hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:-translate-y-0.5"
+               data-i18n="hero.projects">
                 Ver Projetos
             </a>
         </div>
