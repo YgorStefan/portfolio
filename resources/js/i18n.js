@@ -84,7 +84,7 @@ const translations = {
     },
     'project.cvtranslator.desc': {
         pt: 'Ferramenta gratuita para traduzir documentos Word (.docx) para o inglês preservando a formatação original, com exportação para PDF direto pelo navegador.',
-        en: 'Free tool to translate Word (.docx) resumes to English while preserving the original formatting, with PDF export directly from the browser.'
+        en: 'Free tool to translate Word (.docx) documents to English while preserving the original formatting, with PDF export directly from the browser.'
     },
 
     // ── Minijogos ──
