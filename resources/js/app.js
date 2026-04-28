@@ -59,7 +59,7 @@ Alpine.data('skillsGrid', (skills) => ({
         return Array(Math.max(0, count)).fill(null);
     },
 
-    init() {},
+    init() { },
 
     start() {
         if (this.started) return;
@@ -135,14 +135,14 @@ document.addEventListener('DOMContentLoaded', () => {
     applyTranslations(getLang());
     document.documentElement.lang = getLang() === 'pt' ? 'pt-BR' : 'en';
 
-    // Partículas interativas — instanciado 4x, pausam quando seção sai do viewport
-    const heroParticles      = new ParticleCanvas('#hero');
-    const aboutParticles     = new ParticleCanvas('#about');
-    const projectParticles   = new ParticleCanvas('#projects');
+    // Partículas interativas - instanciado 4x, pausam quando seção sai do viewport
+    const heroParticles = new ParticleCanvas('#hero');
+    const aboutParticles = new ParticleCanvas('#about');
+    const projectParticles = new ParticleCanvas('#projects');
     const minijogosParticles = new ParticleCanvas('#minijogos');
 
-    watchParticles(heroParticles,      '#hero');
-    watchParticles(aboutParticles,     '#about');
-    watchParticles(projectParticles,   '#projects');
+    watchParticles(heroParticles, '#hero');
+    watchParticles(aboutParticles, '#about');
+    watchParticles(projectParticles, '#projects');
     watchParticles(minijogosParticles, '#minijogos');
 });

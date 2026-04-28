@@ -36,7 +36,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     @production
-        {{-- Umami Analytics — sem cookies, GDPR-compliant --}}
+        {{-- Umami Analytics - sem cookies, GDPR-compliant --}}
         {{-- Instruções: obter o data-website-id em umami.is → Dashboard → Add website → Get tracking code --}}
         <script defer src="https://cloud.umami.is/script.js"
             data-website-id="0a7dce55-bf69-4c69-8642-0a5e7efea7ae"></script>

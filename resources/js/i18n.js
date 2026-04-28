@@ -52,7 +52,7 @@ const translations = {
     'projects.title': { pt: 'Projetos', en: 'Projects' },
     'projects.subtitle': {
         pt: 'Alguns dos projetos que desenvolvi ou estou desenvolvendo, clique para ver o código ou a demo.',
-        en: 'Some of the projects I\'ve built or am currently building — click to see the code or demo.'
+        en: 'Some of the projects I\'ve built or am currently building - click to see the code or demo.'
     },
     'projects.restricted': {
         pt: 'Para uma experiência completa e testes de funcionalidades restritas,',

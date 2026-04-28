@@ -1,21 +1,21 @@
 /**
- * particles.js — Engine de constelação interativa (Canvas API puro)
+ * particles.js - Engine de constelação interativa (Canvas API puro)
  * Instanciado 3x em app.js: #hero, #about, #projects
  */
 
 const PARTICLE_COUNT_DESKTOP = 85;
-const PARTICLE_COUNT_MOBILE  = 40;   // largura < 768px
-const CONNECT_DISTANCE       = 135;  // px — distância máxima para linha de conexão
-const REPEL_RADIUS           = 110;  // px — raio de fuga do cursor (D-06, D-07)
-const REPEL_FORCE            = 0.06; // intensidade da repulsão (suave, proporcional)
-const BASE_SPEED             = 0.5;  // px/frame (D — velocidade base)
-const DOT_RADIUS             = 2;    // px — raio do dot (D — tamanho)
+const PARTICLE_COUNT_MOBILE = 40;   // largura < 768px
+const CONNECT_DISTANCE = 135;  // px - distância máxima para linha de conexão
+const REPEL_RADIUS = 110;  // px - raio de fuga do cursor (D-06, D-07)
+const REPEL_FORCE = 0.06; // intensidade da repulsão (suave, proporcional)
+const BASE_SPEED = 0.5;  // px/frame (D - velocidade base)
+const DOT_RADIUS = 2;    // px - raio do dot (D - tamanho)
 
 function getColor() {
   // D-03, D-04, D-05: detectar .dark em documentElement
   return document.documentElement.classList.contains('dark')
-    ? 'rgba(255, 255, 255, 0.38)'   // dark mode — branco ~38% opacidade
-    : 'rgba(148, 163, 184, 0.45)';  // light mode — slate-300 ~45% opacidade
+    ? 'rgba(255, 255, 255, 0.38)'   // dark mode - branco ~38% opacidade
+    : 'rgba(148, 163, 184, 0.45)';  // light mode - slate-300 ~45% opacidade
 }
 
 class Particle {
@@ -24,8 +24,8 @@ class Particle {
   }
 
   reset(w, h) {
-    this.x  = Math.random() * w;
-    this.y  = Math.random() * h;
+    this.x = Math.random() * w;
+    this.y = Math.random() * h;
     this.vx = (Math.random() - 0.5) * BASE_SPEED * 2;
     this.vy = (Math.random() - 0.5) * BASE_SPEED * 2;
     // velocidade original para retorno suave após fuga
@@ -60,10 +60,10 @@ class Particle {
     this.y += this.vy;
 
     // Bounce nas bordas
-    if (this.x < 0)  { this.x = 0;  this.vx *= -1; this.ovx *= -1; }
-    if (this.x > w)  { this.x = w;  this.vx *= -1; this.ovx *= -1; }
-    if (this.y < 0)  { this.y = 0;  this.vy *= -1; this.ovy *= -1; }
-    if (this.y > h)  { this.y = h;  this.vy *= -1; this.ovy *= -1; }
+    if (this.x < 0) { this.x = 0; this.vx *= -1; this.ovx *= -1; }
+    if (this.x > w) { this.x = w; this.vx *= -1; this.ovx *= -1; }
+    if (this.y < 0) { this.y = 0; this.vy *= -1; this.ovy *= -1; }
+    if (this.y > h) { this.y = h; this.vy *= -1; this.ovy *= -1; }
   }
 
   draw(ctx) {
@@ -81,26 +81,26 @@ export class ParticleCanvas {
 
     this._canvas = document.createElement('canvas');
     const s = this._canvas.style;
-    s.position       = 'absolute';
-    s.top            = '0';
-    s.left           = '0';
-    s.width          = '100%';
-    s.height         = '100%';
-    s.pointerEvents  = 'none';   // D-10: não bloqueia cliques
-    s.zIndex         = '0';      // D-10: atrás do conteúdo (conteúdo usa z-index maior)
+    s.position = 'absolute';
+    s.top = '0';
+    s.left = '0';
+    s.width = '100%';
+    s.height = '100%';
+    s.pointerEvents = 'none';   // D-10: não bloqueia cliques
+    s.zIndex = '0';      // D-10: atrás do conteúdo (conteúdo usa z-index maior)
 
     // Inserir como primeiro filho para ficar atrás de todo conteúdo
     this._container.insertBefore(this._canvas, this._container.firstChild);
 
-    this._ctx        = this._canvas.getContext('2d');
-    this._particles  = [];
-    this._mouseX     = -9999;
-    this._mouseY     = -9999;
-    this._rafId      = null;
+    this._ctx = this._canvas.getContext('2d');
+    this._particles = [];
+    this._mouseX = -9999;
+    this._mouseY = -9999;
+    this._rafId = null;
 
-    this._onResize   = this._resize.bind(this);
-    this._onMouse    = this._trackMouse.bind(this);
-    this._onLeave    = this._mouseLeave.bind(this);
+    this._onResize = this._resize.bind(this);
+    this._onMouse = this._trackMouse.bind(this);
+    this._onLeave = this._mouseLeave.bind(this);
 
     window.addEventListener('resize', this._onResize);
     this._container.addEventListener('mousemove', this._onMouse);
@@ -120,7 +120,7 @@ export class ParticleCanvas {
     const rect = this._container.getBoundingClientRect();
     // DPR para nitidez em telas retina
     const dpr = window.devicePixelRatio || 1;
-    this._canvas.width  = rect.width  * dpr;
+    this._canvas.width = rect.width * dpr;
     this._canvas.height = rect.height * dpr;
     this._ctx.scale(dpr, dpr);
     this._w = rect.width;
@@ -162,7 +162,7 @@ export class ParticleCanvas {
     ctx.clearRect(0, 0, this._w, this._h);
 
     const color = getColor();
-    ctx.fillStyle   = color;
+    ctx.fillStyle = color;
     ctx.strokeStyle = color;
 
     // Atualizar e desenhar dots

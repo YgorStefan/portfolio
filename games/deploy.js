@@ -9,7 +9,7 @@ GAMES.forEach(game => {
   const dest = path.join(ROOT, 'public', 'games', game)
 
   if (!fs.existsSync(src)) {
-    console.error(`✗ dist não encontrado para ${game} — rode npm run build antes`)
+    console.error(`✗ dist não encontrado para ${game} - rode npm run build antes`)
     process.exit(1)
   }
 

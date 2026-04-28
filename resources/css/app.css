@@ -45,7 +45,7 @@ footer {
     transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
 }
 
-/* ── Skill cards — animação de entrada ── */
+/* ── Skill cards - animação de entrada ── */
 .skill-card {
     opacity: 0;
     translate: 0 14px;
@@ -71,4 +71,3 @@ footer {
     border-color: rgba(59, 130, 246, 0.5);
     box-shadow: 0 4px 20px rgba(59, 130, 246, 0.25);
 }
-
